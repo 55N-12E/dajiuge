@@ -1,0 +1,555 @@
+html,
+body {
+  background: #f5f5f5;
+}
+body {
+  padding-top: 3%;
+  padding-bottom: 100px;
+}
+.payWayWrapper,
+.payProWrapper {
+  background: #fff;
+  margin: 5% 0 0;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.payWayWrapper .top,
+.payProWrapper .top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.payWayWrapper .top .coin,
+.payProWrapper .top .coin {
+  color: #999999;
+}
+.payWayWrapper {
+  display: none;
+  margin-top: 0;
+}
+.payWayWrapper .middle {
+  margin-top: 15px;
+}
+.payWayWrapper .middle ul {
+  font-size: 0;
+}
+.payWayWrapper .middle li {
+  font-size: 14px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  padding: 8.5px 0;
+  margin-left: 10px;
+  display: none;
+}
+.payWayWrapper .middle li .payPic {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  background: url('../images/spirit.png') no-repeat;
+  background-size: 1166.66666667% auto;
+  background-position: 0 99%;
+}
+.payWayWrapper .middle li p {
+  font-size: 12px;
+}
+.payWayWrapper .middle li .chosen {
+  background: url('../images/spirit.png') no-repeat;
+  background-size: 2100% auto;
+  background-position: 35% 86%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  display: none;
+}
+.payWayWrapper .middle li:first-child {
+  margin-left: 0;
+}
+.payWayWrapper .middle li:first-child .payPic {
+  background-position-x: 0;
+}
+.payWayWrapper .middle li:nth-child(2) .payPic {
+  background-position-x: 9.3%;
+}
+.payWayWrapper .middle li:nth-child(3) .payPic {
+  background-position-x: 18.7%;
+}
+.payWayWrapper .middle li.ios .payPic {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  background: url('../images/ios.png') no-repeat;
+  background-size: 100% 100%;
+}
+.payWayWrapper .middle li.active {
+  border-color: #f0c778;
+}
+.payWayWrapper .middle li.active .chosen {
+  display: block;
+}
+.payProWrapper ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.payProWrapper ul li {
+  width: 31%;
+  margin-bottom: 10px;
+  position: relative;
+  border: 1px dashed #e6e6e6;
+  border-radius: 8px;
+}
+.payProWrapper ul li .part {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.payProWrapper ul li .part .partPic {
+  width: 65%;
+  background: url('../images/example.png') no-repeat;
+  background-size: 700% auto;
+  background-position: 0 0;
+  margin: 0 auto;
+}
+.payProWrapper ul li .part .partPic:before {
+  content: "";
+  display: inline-block;
+  padding-bottom: 100%;
+  vertical-align: middle;
+}
+.payProWrapper ul li .part .partTitle {
+  font-size: 14px;
+  text-align: center;
+  line-height: 18px;
+}
+.payProWrapper ul li .part .partDetail {
+  font-size: 13px;
+  text-align: center;
+  line-height: 16px;
+  color: #999999;
+}
+.payProWrapper ul li .part .icon {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: url('../images/spirit.png') no-repeat;
+  background-size: 1590.90909091% auto;
+  display: none;
+}
+.payProWrapper ul li.active {
+  border-color: #f0c778;
+}
+.payProWrapper ul li.active .part .icon {
+  display: block;
+}
+.payProWrapper ul li.active .part .partTitle,
+.payProWrapper ul li.active .part .partDetail {
+  color: #ff3c00;
+}
+.payProWrapper ul li.active.conFee .part .icon {
+  background-position: 50% 94%;
+}
+.payProWrapper ul li.active.openFee .part .icon {
+  background-position: 43% 94%;
+}
+.payProWrapper ul li.notActive .partPic {
+  background-position-y: 100%;
+}
+.payProWrapper ul li:before {
+  content: "";
+  display: inline-block;
+  padding-bottom: 100%;
+  vertical-align: middle;
+}
+.payProWrapper ul li:first-child {
+  display: none;
+}
+.payProWrapper ul li:first-child .partPic {
+  background-position-x: 0;
+}
+.payProWrapper ul li:nth-child(2) {
+  display: none;
+}
+.payProWrapper ul li:nth-child(2) .partPic {
+  background-position-x: 16.66666667%;
+}
+.payProWrapper ul li:nth-child(3) {
+  display: none;
+}
+.payProWrapper ul li:nth-child(3) .partPic {
+  background-position-x: 33.33333333%;
+}
+.payProWrapper ul li:nth-child(4) {
+  display: none;
+}
+.payProWrapper ul li:nth-child(4) .partPic {
+  background-position-x: 50%;
+}
+.payProWrapper ul li:nth-child(5) {
+  display: none;
+}
+.payProWrapper ul li:nth-child(5) .partPic {
+  background-position-x: 66.66666667%;
+}
+.payProWrapper ul li:nth-child(6) {
+  display: none;
+}
+.payProWrapper ul li:nth-child(6) .partPic {
+  background-position-x: 83.33333333%;
+}
+.payProWrapper ul li:last-child {
+  margin-bottom: 0;
+}
+.payProWrapper ul li:last-child .partPic {
+  background-position-x: 100%;
+}
+.buttonWrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  background: #fff;
+  z-index: 999;
+  padding: 4px 0 10px;
+  box-sizing: border-box;
+}
+.buttonWrapper .tips {
+  font-size: 12px;
+  color: #999999;
+  text-align: center;
+  line-height: 20px;
+  margin-bottom: 4px;
+}
+.buttonWrapper .tips span {
+  color: #ff3c00;
+}
+.buttonWrapper .tips.check {
+  color: #fff;
+}
+.buttonWrapper .tips.check span {
+  color: #fff;
+}
+.buttonWrapper .payButton {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  background: linear-gradient(to right, #f8d67c, #d4a559);
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+}
+.payFail,
+.copySucess {
+  text-align: center;
+  position: absolute;
+  width: 70%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  left: 50%;
+  margin-left: -35%;
+  bottom: 10%;
+  z-index: 10000;
+  padding: 7px 0;
+  border-radius: 4px;
+  display: none;
+}
+.payAlipayQuestion,
+.payWeChatQuestion,
+.paySuccess,
+.payEnsure {
+  position: fixed;
+  z-index: 1500;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+}
+.payAlipayQuestion .win,
+.payWeChatQuestion .win,
+.paySuccess .win,
+.payEnsure .win {
+  width: 300px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding-top: 35px;
+}
+.payAlipayQuestion .win .iconClose,
+.payWeChatQuestion .win .iconClose,
+.paySuccess .win .iconClose,
+.payEnsure .win .iconClose {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: url('../images/spirit.png') no-repeat;
+  background-size: 3500% auto;
+  background-position: 56.7% 84%;
+}
+.payAlipayQuestion .win .praph,
+.payWeChatQuestion .win .praph,
+.paySuccess .win .praph,
+.payEnsure .win .praph {
+  color: #4d4d4d;
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.payAlipayQuestion .win .msg,
+.payWeChatQuestion .win .msg,
+.paySuccess .win .msg,
+.payEnsure .win .msg {
+  text-align: center;
+  font-size: 15px;
+}
+.payAlipayQuestion .win .msg p,
+.payWeChatQuestion .win .msg p,
+.paySuccess .win .msg p,
+.payEnsure .win .msg p {
+  line-height: 24px;
+}
+.payAlipayQuestion .win .msg p .copyBtn,
+.payWeChatQuestion .win .msg p .copyBtn,
+.paySuccess .win .msg p .copyBtn,
+.payEnsure .win .msg p .copyBtn {
+  font-size: 12px;
+  line-height: 24px;
+  display: inline-block;
+  vertical-align: top;
+  color: #009fe8;
+  border: 1px solid #009fe8;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+.payAlipayQuestion .win .button,
+.payWeChatQuestion .win .button,
+.paySuccess .win .button,
+.payEnsure .win .button {
+  width: 250px;
+  margin: 10px auto 0;
+  text-align: center;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 19px;
+}
+.payAlipayQuestion .win .coinPayButton,
+.payWeChatQuestion .win .coinPayButton,
+.paySuccess .win .coinPayButton,
+.payEnsure .win .coinPayButton {
+  background: #fed700;
+}
+.payAlipayQuestion .win .alipayButton,
+.payWeChatQuestion .win .alipayButton,
+.paySuccess .win .alipayButton,
+.payEnsure .win .alipayButton {
+  border: 1px solid #fed700;
+}
+.payAlipayQuestion {
+  display: none;
+}
+.payAlipayQuestion .win {
+  height: 200px;
+}
+.payWeChatQuestion {
+  display: none;
+}
+.payWeChatQuestion .win {
+  height: 250px;
+}
+.paySuccess {
+  display: none;
+}
+.paySuccess .win {
+  width: 200px;
+  height: 200px;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.paySuccess .win p {
+  font-size: 20px;
+}
+.paySuccess .win p:before {
+  display: block;
+  margin: 0 auto 10px;
+  width: 50px;
+  height: 50px;
+  background: url('../images/paySuccess.png') no-repeat;
+  background-size: cover;
+  content: '';
+}
+#loading {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.6);
+}
+#loading #wrap {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+  border-radius: 4px;
+}
+#loading #wrap .spinner {
+  width: 70px;
+  height: 70px;
+  position: relative;
+}
+#loading #wrap .text {
+  margin-top: 30px;
+}
+#loading #wrap .container1 > div,
+#loading #wrap .container2 > div {
+  width: 12px;
+  height: 12px;
+  background-color: #f0c778;
+  border-radius: 100%;
+  position: absolute;
+  text-align: center;
+  line-height: 60px;
+  animation: round 2s infinite ease-in-out;
+  /*animation-fill-mode: both;*/
+}
+#loading #wrap .spinner .spinner-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#loading #wrap .container2 {
+  transform: rotateZ(45deg);
+}
+#loading #wrap .circle1 {
+  top: 0;
+  left: 0;
+}
+#loading #wrap .circle2 {
+  top: 0;
+  right: 0;
+}
+#loading #wrap .circle3 {
+  right: 0;
+  bottom: 0;
+}
+#loading #wrap .circle4 {
+  left: 0;
+  bottom: 0;
+}
+#loading #wrap .container2 .circle1 {
+  animation-delay: -1.4s;
+}
+#loading #wrap .container1 .circle2 {
+  animation-delay: -1.2s;
+}
+#loading #wrap .container2 .circle2 {
+  animation-delay: -1s;
+}
+#loading #wrap .container1 .circle3 {
+  animation-delay: -0.8s;
+}
+#loading #wrap .container2 .circle3 {
+  animation-delay: -0.6s;
+}
+#loading #wrap .container1 .circle4 {
+  animation-delay: -0.4s;
+}
+#loading #wrap .container2 .circle4 {
+  animation-delay: -0.2s;
+}
+.payEnsure {
+  display: none;
+}
+.payEnsure .win {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.payEnsure .win .text {
+  text-align: center;
+}
+.payEnsure .win .button {
+  border-radius: 19px;
+}
+.payEnsure .win .button-wrapper {
+  margin-top: 18px;
+}
+.payEnsure .win .cancel {
+  border: 1px solid #fed700;
+}
+.payEnsure .win .sure {
+  background: #fed700;
+}
+@-webkit-keyframes round {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+@keyframes round {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+@media only screen and (max-width: 320px) {
+  body {
+    padding-bottom: 90px;
+  }
+  .payProWrapper ul li .part .partTitle {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .payProWrapper ul li .part .partDetail {
+    font-size: 12px;
+  }
+}

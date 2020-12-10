@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>永久极品靓号</title>
+
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <script src="../../common/js/flexible.js"></script>
+
+  <style>
+    img{
+      max-width: 100%;
+      width: 100%;
+      pointer-events: none;
+    }
+
+    .weekstone{
+      position: absolute;
+      top: 25.3rem;
+      left: 2rem;
+      font-size: 0.53rem;
+      color: #fff;
+      font-weight: bolder;
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 360px){
+      .weekstone{
+        top: 25.45rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="./images/forevernum.png" alt="" />
+  <div class="weekstone">本周您已消耗石头:&nbsp;&nbsp;<span style="font-weight: bolder;"></span></div>
+
+  <script src="../../common/js/jquery-3.2.1.min.js"></script>
+  <script src="../../common/js/common.js"></script>
+  <script src="../../common/js/vconsole.min.js"></script>
+  <script>
+    var info = {}
+    if(EnvCheck() == 'test'){
+      var vConsole = new VConsole;
+    }
+
+    $(function(){
+      if(checkVersion().app){
+        if(checkVersion().ios){
+          window.webkit.messageHandlers.getUid.postMessage(null);
+          window.webkit.messageHandlers.getTicket.postMessage(null);
+          window.webkit.messageHandlers.getDeviceId.postMessage(null);
+        }else if(checkVersion().android){
+          if(androidJsObj && typeof androidJsObj === 'object'){
+            info.uid = parseInt(window.androidJsObj.getUid());
+            info.ticket = window.androidJsObj.getTicket();
+            info.deviceId = window.androidJsObj.getDeviceId();
+          }
+        }
+      }else{
+        info.uid=924229;
+        info.deviceId = "MIPC880128"
+      }
+
+      setTimeout(function(){
+        $.ajax({
+          url: locateJudge() + "/hitball/week/userConsumeStoneNum?uid=" + info.uid,
+          type: "get",
+          headers: {
+            "pub_uid": info.uid
+          },
+          success(res){
+            console.log(res)
+            if(res.code == 200){
+              $(".weekstone span").text(res.data)
+            }
+          },
+          error(err){
+            console.log(err)
+          }
+        })
+      }, 300)
+      
+    })
+
+    // IOS回调方法
+    function getMessage(key, value) {
+      info[key] = value
+    }
+  </script>
+</body>
+</html>

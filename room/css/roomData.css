@@ -1,0 +1,344 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  pointer-events: none;
+}
+
+i {
+  font-style: normal;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+.container {
+  height: 100%;
+}
+
+.nav {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+.nav li {
+  width: 25%;
+  text-align: center;
+}
+
+.nav li.active {
+  color: #FF6A92;
+}
+
+.nav .triangle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.2s;
+}
+
+.nav .triangle.p-1 {
+  left: 9%;
+}
+
+.nav .triangle.p-2 {
+  left: 34.5%;
+}
+
+.nav .triangle.p-3 {
+  left: 59.5%;
+}
+
+.nav .triangle.p-4 {
+  left: 84.5%;
+}
+
+.content .detail {
+  margin: 10px auto;
+  background: linear-gradient(0deg, #fff, #f7f7f7);
+  padding: 10px;
+}
+
+.content .detail .water {
+  background: url("../images/roomData-bg.png") no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 7px;
+  font-size: 12px;
+}
+
+.content .detail .water h4 {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+
+.content .detail .water img {
+  width: 16px;
+  height: 16px;
+  margin-right: 7px;
+}
+
+.content .detail .rankDetail {
+  position: relative;
+  font-size: 14px;
+}
+
+.content .detail .rankDetail > div {
+  width: 50%;
+}
+
+.content .detail .rankDetail > div p {
+  font-size: 12px;
+}
+
+.content .detail .rankDetail > div span {
+  font-size: 16px;
+}
+
+.content .detail .rankDetail .line {
+  position: absolute;
+  background: #fff;
+  width: 1px;
+  height: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.content .detail .roomNum {
+  position: relative;
+  background: url("../images/roomData-bg-s.png") no-repeat;
+  background-size: cover;
+  border-radius: 7px;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.content .detail .roomNum span {
+  font-size: 25px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.content .detail .roomNum img {
+  width: 16px;
+  height: 16px;
+  margin-right: 7px;
+}
+
+.content .list .title {
+  background: #ddd;
+  color: #999;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 50px;
+  justify-content: space-between;
+}
+
+.content .list .title span {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.content .list .title span.active {
+  background: #FF6A92;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.content .list .ulBox {
+  overflow-y: scroll;
+}
+
+.content .list .ulBox::-webkit-scrollbar {
+  display: none;
+}
+
+.content .list .list-content {
+  width: 95%;
+  margin: 15px auto 0 auto;
+}
+
+.content .list .list-content li {
+  justify-content: space-between;
+  padding-bottom: 15px;
+  font-size: 16px;
+}
+
+.content .list .list-content li .left {
+  align-items: center;
+}
+
+.content .list .list-content li .left .rank-no {
+  width: 20px;
+  height: 20px;
+}
+
+.content .list .list-content li .left .user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+  pointer-events: auto;
+}
+
+.content .list .list-content li .left .user-name {
+  display: flex;
+  align-items: center;
+}
+
+.content .list .list-content li .left .user-name > img {
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+}
+
+.content .list .list-content li .right {
+  align-items: center;
+}
+
+.content .list .list-content li .right img {
+  width: 16px;
+  height: 13px;
+  margin-left: 10px;
+}
+
+.loading {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.loading #wrap {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.loading #wrap .spinner {
+  width: 70px;
+  height: 70px;
+  position: relative;
+}
+
+.loading #wrap .text {
+  margin-top: 30px;
+}
+
+.loading #wrap .container1 > div,
+.loading #wrap .container2 > div {
+  width: 12px;
+  height: 12px;
+  background-color: #f0c778;
+  border-radius: 100%;
+  position: absolute;
+  text-align: center;
+  line-height: 60px;
+  animation: round 2s infinite ease-in-out;
+  /*animation-fill-mode: both;*/
+}
+
+.loading #wrap .spinner .spinner-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.loading #wrap .container2 {
+  transform: rotateZ(45deg);
+}
+
+.loading #wrap .circle1 {
+  top: 0;
+  left: 0;
+}
+
+.loading #wrap .circle2 {
+  top: 0;
+  right: 0;
+}
+
+.loading #wrap .circle3 {
+  right: 0;
+  bottom: 0;
+}
+
+.loading #wrap .circle4 {
+  left: 0;
+  bottom: 0;
+}
+
+.loading #wrap .container2 .circle1 {
+  animation-delay: -1.4s;
+}
+
+.loading #wrap .container1 .circle2 {
+  animation-delay: -1.2s;
+}
+
+.loading #wrap .container2 .circle2 {
+  animation-delay: -1s;
+}
+
+.loading #wrap .container1 .circle3 {
+  animation-delay: -0.8s;
+}
+
+.loading #wrap .container2 .circle3 {
+  animation-delay: -0.6s;
+}
+
+.loading #wrap .container1 .circle4 {
+  animation-delay: -0.4s;
+}
+
+.loading #wrap .container2 .circle4 {
+  animation-delay: -0.2s;
+}
+
+@keyframes round {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}

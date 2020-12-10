@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>推荐上热门</title>
+
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="./css/recommend.css">
+
+  <script src="../../common/js/flexible.js"></script>
+</head>
+<body>
+  <div class="max">
+    <div class="user-inside">
+      <div class="recommend-avatar">
+        <img src="./images/ic_noble_hot_search@2x.png" alt="">
+      </div>
+      <input type="text" placeholder="请输入房主ID">
+    </div>
+
+    <div class="tip">
+      <p>
+        <span>本月剩余推荐次数</span>
+        <span class="times"></span>
+      </p>
+      <p>
+        <span>出现在热门时间</span>
+        <span>2小时</span>
+      </p>
+    </div>
+
+    <div class="recommend-btn">确认推荐</div>
+
+    <div class="mask">
+      <div class="tips">提示</div>
+      <div class="content">是否确认推荐？</div>
+      <div class="mask-btn">
+        <p class="cancel">取消</p>
+        <p class="confirm">确认</p>
+      </div>
+    </div>
+
+    <div class="shade"></div>
+
+    <div class="toast"></div>
+  </div>
+</body>
+<script src="../../common/js/jquery-3.2.1.min.js"></script>
+<script src="../../common/js/common.js"></script>
+<script src="../../common/js/vconsole.min.js"></script>
+<script src="./js/recommend.js"></script>
+</html>

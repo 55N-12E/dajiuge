@@ -1,0 +1,172 @@
+body {
+  background: rgba(38, 35, 34, 1);
+}
+img{
+  max-width: 100%;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.surf-apply-one,
+.surf-apply-two,
+.surf-apply-three {
+  display: none;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px 4%;
+}
+.surf-apply-one .apply-explain,
+.surf-apply-two .apply-explain,
+.surf-apply-three .apply-explain {
+  margin-top: 0.8rem;
+  font-size: 14px;
+  color: #999999;
+  line-height: 0.56rem;
+}
+.surf-apply-one .apply-explain .apply-title,
+.surf-apply-two .apply-explain .apply-title,
+.surf-apply-three .apply-explain .apply-title {
+  font-size: 16px;
+  color: rgba(235, 205, 133, 1);
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  margin-bottom: 0.1333333333rem;
+}
+.surf-apply-one .apply-explain p,
+.surf-apply-two .apply-explain p,
+.surf-apply-three .apply-explain p {
+  font-size: 13px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: rgba(189, 157, 95, 1);
+  line-height: 20px;
+}
+.surf-apply-one .input-box {
+  display: -webkit-flex;
+  display: flex;
+  display: -moz-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  width: 100%;
+  height: 1.0666666667rem;
+  background-color: rgba(240, 240, 240, 1);
+  box-shadow: 0px 9px 24px 0px rgba(21, 21, 21, 0.14);
+  border-radius: 40px;
+}
+
+.surf-apply-one .input-box img {
+  margin-left: 0.2666666667rem;
+  margin-right: 0.2666666667rem;
+  width: 0.6933333333rem;
+  height: 0.6933333333rem;
+}
+.surf-apply-one .input-box input {
+  width: 80%;
+  background-color: rgba(240, 240, 240, 1);
+  color: rgba(167, 167, 167, 1);
+  font-weight: 400;
+  font-size: 14px;
+  text-align: left;
+}
+.surf-apply-one .input-box input:focus {
+  outline: none;
+}
+.surf-apply-one .input-box input::-webkit-input-placeholder {
+  color: #b3b3b3;
+}
+.surf-apply-one .input-box input::-moz-placeholder {
+  color: #b3b3b3;
+}
+.surf-apply-one .input-box input:-ms-input-placeholder {
+  color: #b3b3b3;
+}
+.surf-apply-one .apply-button {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 243px;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  background: linear-gradient(
+    135deg,
+    rgba(223, 164, 87, 1) 0%,
+    rgba(174, 105, 67, 1) 37%,
+    rgba(174, 105, 67, 1) 54%,
+    rgba(224, 165, 88, 1) 100%
+  );
+  box-shadow: 0px 6px 16px 0px rgba(68, 30, 5, 0.6);
+  border-radius: 44px;
+  font-size: 18px;
+  color: rgba(247, 201, 142, 1);
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+}
+.surf-apply-one .toast {
+  bottom: 30%;
+  position: absolute;
+  width: 240px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  color: #fff;
+  line-height: 20px;
+  left: 50%;
+  margin-left: -120px;
+  text-align: center;
+  font-size: 14px;
+  display: none;
+}
+
+.surf-apply-two .list-box,
+.surf-apply-three .list-box {
+  margin: 0 auto;
+  margin-top: 0.2666666667rem;
+  width: 9.2rem;
+  height: 2.6666666667rem;
+  background-color: #ffffff;
+  box-shadow: 0px 9px 24px 0px rgba(21, 21, 21, 0.14);
+  border-radius: 0.2133333333rem;
+}
+.surf-apply-two .list-box .list-box-child,
+.surf-apply-three .list-box .list-box-child {
+  width: 8.6666666667rem;
+  margin-left: 0.2666666667rem;
+  margin-right: 0.2666666667rem;
+  height: 1.3333333333rem;
+  display: -webkit-flex;
+  display: flex;
+  display: -moz-box;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.surf-apply-two .list-box .list-box-child:first-child,
+.surf-apply-three .list-box .list-box-child:first-child {
+  border-bottom: 1px solid #ececec;
+}
+.surf-apply-two .list-box .list-box-child span:first-child,
+.surf-apply-three .list-box .list-box-child span:first-child {
+  font-size: 15px;
+  color: #1a1a1a;
+}
+.surf-apply-two .list-box .list-box-child .child-number,
+.surf-apply-three .list-box .list-box-child .child-number {
+  font-size: 14px;
+  color: rgba(189, 157, 95, 1);
+}
+.surf-apply-two .list-box .list-box-child .child-title,
+.surf-apply-three .list-box .list-box-child .child-title {
+  font-size: 14px;
+  color: rgba(245, 109, 94, 1);
+}
+
+/*# sourceMappingURL=numApply.css.map */

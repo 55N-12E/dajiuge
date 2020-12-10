@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>气球配对</title>
+  <link rel="stylesheet" href="../common/css/reset.css">
+  <script src="../../common/js/flexible.js"></script>
+  <style>
+    img{
+      max-width: 100%;
+    }
+
+    .container{
+      position: relative;
+    }
+    .container .balloonMatch{
+      position: absolute;
+      /* width: 82%; */
+      /* display: flex; */
+      left: 50px;
+      /* right: 0; */
+      margin: 0 auto;
+      align-items: center;
+    }
+    .container .balloonMatch>img{
+      width: 25px;
+      height: 25px;
+      margin: 0 5px;
+    }
+    .container .balloonMatch>div{
+      position: relative;
+    }
+    .container .balloonMatch>div .gift{
+      position: absolute;
+      width: 1.45rem;
+      height: 1.45rem;
+      top: 5px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+    .container .balloonMatch>div h4{
+      color: #fff;
+      background: #5896FF;
+      margin: 0 auto;
+      width: 80%;
+      text-align: center;
+      border-radius: 5px;
+      padding: 3px 0;
+      position: absolute;
+      top: calc(1.45rem + 0px);
+      left: 10%;
+    }
+    .container .balloonMatch>div h1{
+      color: #2C2D8C;
+      background: #FFE12E;
+      border: 1px solid #000;
+      margin: 0 auto;
+      width: calc(95% - 2px);
+      text-align: center;
+      border-radius: 50px;
+      padding: 3px 0;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+    }
+    .no1{
+      top: 33.3rem;
+    }
+    .no2{
+      top: 42.5rem;
+    }
+    .no3{
+      top: 50.5rem;
+    }
+    .no4{
+      top: 58.55rem; 
+    }
+    .no5{
+      top: 66.6rem;
+    }
+
+    @media only screen and (max-width: 360px){
+      .container .balloonMatch>div img:first-child{
+        width: 3.2rem !important;
+      }
+      .balloon-1-1{
+        margin-bottom: 1.3rem !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="./images/match-bg.png" alt="" />
+
+    <div class="balloonMatch no1">
+      <div class="balloon-1-1" style="margin-bottom: 1.45rem;">
+        <img src="./images/gift-bg.png" style="width: 2.4rem;height: 2.4rem;" alt="" />
+        <img class="gift " src="" alt="" />
+        <h4 class="name-1-1"></h4>
+        <h1 class="num-1-1"></h1>
+      </div>
+      <div class="balloon-1-2">
+        <img src="./images/gift-bg.png" style="width: 2.4rem;height: 2.4rem;" alt="" />
+        <img class="gift " src="" alt="" />
+        <h4 class="name-1-2"></h4>
+        <h1 class="num-1-2"></h1>
+      </div>
+    </div>
+
+    <div class="balloonMatch no2">
+      <div class="balloon-2-1" style="margin-bottom: 1.35rem;">
+        <img src="./images/gift-bg.png" style="width: 2.4rem;height: 2.4rem;" alt="" />
+        <img class="gift " src="" alt="" />
+        <h4 class="name-2-1"></h4>
+        <h1 class="num-2-1"></h1>
+      </div>
+      <div class="balloon-2-2">
+        <img src="./images/gift-bg.png" style="width: 2.4rem;height: 2.4rem;" alt="" />
+        <img class="gift " src="" alt="" />
+        <h4 class="name-2-2"></h4>
+        <h1 class="num-2-2"></h1>
+      </div>
+    </div>
+
+    <div class="balloonMatch no3">
+      <div class="balloon-3-1" style="margin-bottom: 1.35rem;">
+        <img src="./images/gift-bg.png" style="width: 2.4rem;height: 2.4rem;" alt="" />
+        <img class="gift " src="" alt="" />
+        <h4 class="name-3-1"></h4>
+        <h1 class="num-3-1"></h1>
+      </div>
+      <div class="balloon-3-2">
+        <img src="./images/gift-bg.png" style="width: 2.4rem;height: 2.4rem;" alt="" />
+        <img class="gift " src="" alt="" />
+        <h4 class="name-3-2"></h4>
+        <h1 class="num-3-2"></h1>
+      </div>
+    </div>
+
+    <div class="balloonMatch no4">
+      <div class="balloon-4-1" style="margin-bottom: 1.35rem;">
+        <img src="./images/gift-bg.png" style="width: 2.4rem;height: 2.4rem;" alt="" />
+        <img class="gift " src="" alt="" />
+        <h4 class="name-4-1"></h4>
+        <h1 class="num-4-1"></h1>
+      </div>
+      <div class="balloon-4-2">
+        <img src="./images/gift-bg.png" style="width: 2.4rem;height: 2.4rem;" alt="" />
+        <img class="gift " src="" alt="" />
+        <h4 class="name-4-2"></h4>
+        <h1 class="num-4-2"></h1>
+      </div>
+    </div>
+
+    <div class="balloonMatch no5">
+      <div class="balloon-5-1" style="margin-bottom: 1.35rem;">
+        <img src="./images/gift-bg.png" style="width: 2.4rem;height: 2.4rem;" alt="" />
+        <img class="gift " src="" alt="" />
+        <h4 class="name-5-1"></h4>
+        <h1 class="num-5-1"></h1>
+      </div>
+      <div class="balloon-5-2">
+        <img src="./images/gift-bg.png" style="width: 2.4rem;height: 2.4rem;" alt="" />
+        <img class="gift " src="" alt="" />
+        <h4 class="name-5-2"></h4>
+        <h1 class="num-5-2"></h1>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../../common/js/jquery-3.2.1.min.js"></script>
+  <script src="../../common/js/common.js"></script>
+  <script src="../../common/js/vconsole.min.js"></script>
+  <script>
+    var info = {}
+    if(EnvCheck() == 'test'){
+      var vConsole = new VConsole;
+    }
+
+    $(function(){
+      if(checkVersion().app){
+        if(checkVersion().ios){
+          window.webkit.messageHandlers.getUid.postMessage(null);
+          window.webkit.messageHandlers.getTicket.postMessage(null);
+          window.webkit.messageHandlers.getDeviceId.postMessage(null);
+        }else if(checkVersion().android){
+          if(androidJsObj && typeof androidJsObj === 'object'){
+            info.uid = parseInt(window.androidJsObj.getUid());
+            info.ticket = window.androidJsObj.getTicket();
+            info.deviceId = window.androidJsObj.getDeviceId();
+          }
+        }
+      }else{
+        info.uid=924229;
+      }
+
+      setTimeout(function(){
+        $.ajax({
+          url: locateJudge() + "/hitball/statisActivityHitballDrawGiftNum?uid=" + info.uid,
+          type: "get",
+          headers: {
+            "pub_uid": info.uid
+          },
+          success(res){
+            console.log(res)
+            if(res.code == 200){
+              // 1
+              $(".no1 .balloon-1-1 .gift").attr("src", res.data[3].picUrl)
+              $(".no1 .balloon-1-1 h4").text(res.data[3].giftName)
+              $(".no1 .balloon-1-1 h1").text("已获得"+ (res.data[3].giftNum > 99 ?"99+":res.data[3].giftNum) +"个")
+
+              $(".no1 .balloon-1-2 .gift").attr("src", res.data[5].picUrl)
+              $(".no1 .balloon-1-2 h4").text(res.data[5].giftName)
+              $(".no1 .balloon-1-2 h1").text("已获得"+ (res.data[5].giftNum > 99 ?"99+":res.data[5].giftNum) +"个")
+
+              // 2
+              $(".no2 .balloon-2-1 .gift").attr("src", res.data[6].picUrl)
+              $(".no2 .balloon-2-1 h4").text(res.data[6].giftName)
+              $(".no2 .balloon-2-1 h1").text("已获得"+ (res.data[6].giftNum > 99 ?"99+":res.data[6].giftNum) +"个")
+              
+              $(".no2 .balloon-2-2 .gift").attr("src", res.data[1].picUrl)
+              $(".no2 .balloon-2-2 h4").text(res.data[1].giftName)
+              $(".no2 .balloon-2-2 h1").text("已获得"+ (res.data[1].giftNum > 99 ?"99+":res.data[1].giftNum) +"个")
+
+              // 3
+              $(".no3 .balloon-3-1 .gift").attr("src", res.data[2].picUrl)
+              $(".no3 .balloon-3-1 h4").text(res.data[2].giftName)
+              $(".no3 .balloon-3-1 h1").text("已获得"+ (res.data[2].giftNum > 99 ?"99+":res.data[2].giftNum) +"个")
+
+              $(".no3 .balloon-3-2 .gift").attr("src", res.data[7].picUrl)
+              $(".no3 .balloon-3-2 h4").text(res.data[7].giftName)
+              $(".no3 .balloon-3-2 h1").text("已获得"+ (res.data[7].giftNum > 99 ?"99+":res.data[7].giftNum) +"个")
+
+              // 4
+              $(".no4 .balloon-4-1 .gift").attr("src", res.data[0].picUrl)
+              $(".no4 .balloon-4-1 h4").text(res.data[0].giftName)
+              $(".no4 .balloon-4-1 h1").text("已获得"+ (res.data[0].giftNum > 99 ?"99+":res.data[0].giftNum) +"个")
+
+              $(".no4 .balloon-4-2 .gift").attr("src", res.data[8].picUrl)
+              $(".no4 .balloon-4-2 h4").text(res.data[8].giftName)
+              $(".no4 .balloon-4-2 h1").text("已获得"+ (res.data[8].giftNum > 99 ?"99+":res.data[8].giftNum) +"个")
+
+              // 5
+              $(".no5 .balloon-5-1 .gift").attr("src", res.data[4].picUrl)
+              $(".no5 .balloon-5-1 h4").text(res.data[4].giftName)
+              $(".no5 .balloon-5-1 h1").text("已获得"+ (res.data[4].giftNum > 99 ?"99+":res.data[4].giftNum) +"个")
+
+              $(".no5 .balloon-5-2 .gift").attr("src", res.data[9].picUrl)
+              $(".no5 .balloon-5-2 h4").text(res.data[9].giftName)
+              $(".no5 .balloon-5-2 h1").text("已获得"+ (res.data[9].giftNum > 99 ?"99+":res.data[9].giftNum) +"个")
+            }
+          },
+          error(err){
+            console.log(err)
+          }
+        })
+      }, 300)
+    })
+
+    // IOS回调方法
+    function getMessage(key, value) {
+      info[key] = value
+    }
+  </script>
+</body>
+</html>

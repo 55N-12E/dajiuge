@@ -1,0 +1,158 @@
+@function px2rem($px, $rem:75) {
+  @return $px / $rem + rem;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+img{
+  width: 100%;
+  vertical-align: top;
+}
+
+@import '../../../common/css/flex.scss';
+
+.level-head{
+  width: 100%;
+  height: px2rem(80);
+  @include flex();
+  .level{
+    position: relative;
+    @include flex();
+    @include flex-justify-center();
+    @include flex-align-center();
+    width: 50%;
+    height: px2rem(80);
+    font-size: 16px;
+    color: #999999;
+    &.active{
+      color: #333333;
+      span{
+        position: absolute;
+        left: 50%;
+        transform:translateX(-50%) ;
+        bottom: 0;
+        width: px2rem(50);
+        height: px2rem(6);
+        background-color: #ff894f;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+.user-content{
+  display: block;
+  width: 100%;
+  background-color: #f5f5f5;
+  &:last-of-type{
+    display: none;
+  }
+  .user-content-one{
+    position: relative;
+    @include flex();
+    @include flexv();
+    @include flex-align-center();
+    width: 100%;
+    height: px2rem(440);
+    background-color: #ffffff;
+    .user-head{
+      &.charm{
+        background-image: url("../images/charm-head.png");
+      }
+      position: relative;
+      margin-top: px2rem(70);
+      width: px2rem(218);
+      height: px2rem(178);
+      background-image: url("../images/user-head.png");
+      background-size: cover;
+      img{
+        position: absolute;
+        left: 50%;
+        top:50%;
+        margin-left: px2rem(-68);
+        margin-top: px2rem(-64);
+        border-radius: 50%;
+        width: px2rem(136);
+        height: px2rem(136);
+      }
+      .user-level{
+        position: absolute;
+        bottom:0;
+        width: px2rem(218);
+        height: px2rem(48);
+        background-image: url("../images/tie.png");
+        background-size: cover;
+        font-size: 15px;
+        color: #ffffff;
+        line-height: px2rem(48);
+        text-align: center;
+      }
+    }
+    .user-name{
+      margin-top: px2rem(20);
+      height: px2rem(60);
+      line-height: px2rem(60);
+      text-align: center;
+      font-size: 16px;
+      color: #333333;
+    }
+    .schedule{
+      margin-top: px2rem(35);
+      overflow: hidden;
+      width: px2rem(560);
+      height: px2rem(8);
+      background-color: #f5f5f5;
+      border-radius: 3px;
+      .schedule-box{
+        &.charm{
+          background-color: #ff3852;
+        }
+        width: px2rem(269);
+        height: px2rem(8);
+        background-color: #ff894f;
+        border-radius: 3px;
+      }
+    }
+    .experience{
+      &.charm{
+        span{
+          color: #ff3852;
+        };
+      }
+      margin-top: px2rem(20);
+      text-align: center;
+      width: px2rem(500);
+      font-size: 13px;
+      color: #333333;
+      span{
+        margin-left: px2rem(10);
+        margin-right: px2rem(10);
+        color: #ff894f;
+      }
+    }
+    .level-explain{
+      position: absolute;
+      right: 0;
+      top:px2rem(30);
+      width: px2rem(140);
+      height: px2rem(50);
+      line-height: px2rem(50);
+      text-align: center;
+      background-color: #ff894f;
+      border-radius: 25px 0px 0px 25px;
+      color: #ffffff;
+      font-size: 13px;
+    }
+    .user-bg{
+      position: absolute;
+      top:px2rem(50);
+      width: px2rem(616);
+      height: px2rem(230);
+      background-image: url("../images/user-bg.png");
+      background-size: cover;
+    }
+  }
+  .user-bg{
+    margin-top: px2rem(20);
+  }
+}

@@ -1,0 +1,200 @@
+body,
+html {
+  background: #f5f5f5;
+  width: 100%;
+  height: 100%;
+}
+.applyBegin,
+.applyProcess,
+.applyComplete {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.applyBegin {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 15px 4%;
+  position: relative;
+}
+.applyBegin .inputWrapper {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.applyBegin .inputWrapper input {
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+.applyBegin .inputWrapper input:focus {
+  outline: none;
+}
+.applyBegin .ruleWrapper {
+  font-size: 14px;
+  color: #999999;
+}
+.applyBegin .ruleWrapper p {
+  line-height: 20px;
+}
+.applyBegin .buttonWrapper {
+  margin-top: 15px;
+}
+.applyBegin .buttonWrapper .button {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  background: linear-gradient(to right, #f8d67c, #d4a55a);
+}
+.applyBegin .toast {
+  bottom: 10%;
+  position: absolute;
+  width: 240px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  color: #fff;
+  line-height: 20px;
+  left: 50%;
+  margin-left: -120px;
+  text-align: center;
+  font-size: 14px;
+  display: none;
+}
+.applyProcess .progressWrapper,
+.applyComplete .progressWrapper {
+  height: 200px;
+  position: relative;
+  background: linear-gradient(to right, #f6d37a, #d6a85b);
+  overflow: hidden;
+}
+.applyProcess .progressWrapper .wave1,
+.applyComplete .progressWrapper .wave1,
+.applyProcess .progressWrapper .wave2,
+.applyComplete .progressWrapper .wave2 {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+  background-size: 50% auto;
+}
+.applyProcess .progressWrapper .wave1,
+.applyComplete .progressWrapper .wave1 {
+  background-image: url('../images/wave1.png');
+  animation: move_wave 5s linear infinite;
+}
+.applyProcess .progressWrapper .wave2,
+.applyComplete .progressWrapper .wave2 {
+  background-image: url("../images/wave2.png");
+  animation: move_wave 3s linear infinite;
+}
+.applyProcess .progress,
+.applyComplete .progress {
+  box-sizing: border-box;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.applyProcess .progress:before,
+.applyComplete .progress:before {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.applyProcess .progress p,
+.applyComplete .progress p {
+  color: #fff;
+}
+.applyProcess .progress p:before,
+.applyComplete .progress p:before {
+  display: block;
+  content: '';
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  background: url('../images/spirit.png') no-repeat;
+  margin-bottom: 10px;
+}
+.applyProcess .contentWrapper,
+.applyComplete .contentWrapper {
+  padding: 0 4%;
+}
+.applyProcess .contentWrapper .text,
+.applyComplete .contentWrapper .text {
+  padding: 40px 0;
+  text-align: center;
+}
+.applyProcess .contentWrapper .text p,
+.applyComplete .contentWrapper .text p {
+  line-height: 20px;
+}
+.applyProcess .contentWrapper .text .erbanNo,
+.applyComplete .contentWrapper .text .erbanNo {
+  color: #e6be6a;
+}
+.applyProcess .contentWrapper .rule,
+.applyComplete .contentWrapper .rule {
+  font-size: 14px;
+  color: #999999;
+}
+.applyProcess .contentWrapper .rule p,
+.applyComplete .contentWrapper .rule p {
+  line-height: 20px;
+}
+.applyProcess .progress:before {
+  background: url('../images/circle.png') no-repeat;
+  background-size: cover;
+  animation: spin 1.5s ease infinite;
+}
+.applyProcess .progress p:before {
+  background-size: 1296.2962963% auto;
+  background-position: 69.5% 96.3%;
+}
+.applyComplete .progress:before {
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+.applyComplete .progress p:before {
+  background-size: 1166.66666667% auto;
+  background-position: 78.5% 96.3%;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(1.55);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}

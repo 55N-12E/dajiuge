@@ -1,0 +1,593 @@
+.text-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: -webkit-flex;
+  display: flex;
+  display: -moz-box;
+}
+
+.none {
+  display: none;
+}
+
+html, body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  height: 100%;
+}
+
+input {
+  user-select: auto;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  pointer-events: none;
+}
+
+i {
+  font-style: normal;
+}
+
+#container {
+  background: url("../images/bg.png") no-repeat;
+  background-size: cover;
+}
+
+#container > img {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+#container .introduction-img {
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  width: 2.4rem;
+  height: 0.64rem;
+  margin: 0;
+}
+
+#container .content {
+  margin: 0 auto;
+  color: #fff;
+  padding-bottom: 60px;
+}
+
+#container .content .gift-list li {
+  display: -webkit-flex;
+  display: flex;
+  display: -moz-box;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+}
+
+#container .content .gift-list li:nth-child(even) {
+  margin: 0.53333rem 0;
+}
+
+#container .content .gift-list li img {
+  height: 3.4rem;
+}
+
+#container .content .gift-list li > div {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  position: absolute;
+  display: flex;
+  width: 80%;
+  left: 1rem;
+  top: 0.85rem;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 360px) {
+  #container .content .gift-list li > div {
+    width: 82%;
+    left: 0.9rem;
+  }
+}
+
+#container .content .gift-list li > div .left {
+  background: #E1C7F9;  position: relative;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+#container .content .gift-list li > div .left > img {
+  width: 1.14667rem;
+  height: 1.36rem;
+  position: relative;
+  top: 3px;
+  z-index: 4;
+}
+
+#container .content .gift-list li > div .left > img.xian {
+  position: absolute;
+  width: 1.01333rem;
+  height: 1.01333rem;
+  top: 0px;
+  left: 0px;
+  padding: 0;
+  z-index: 5;
+}
+
+#container .content .gift-list li > div .right {
+  width: 75%;
+}
+
+#container .content .gift-list li > div .right > h4 {
+  font-size: 0.4rem;
+}
+
+#container .content .gift-list li > div .right .gift-detail {
+  display: -webkit-flex;
+  display: flex;
+  display: -moz-box;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+#container .content .gift-list li > div .right .gift-detail > div:first-child {
+  font-size: 0.4rem;
+}
+
+#container .content .gift-list li > div .right .gift-detail > div:first-child p {
+  display: flex;
+  align-items: center;
+}
+
+#container .content .gift-list li > div .right .gift-detail > div.btn {
+  background: linear-gradient(90deg, #FEEB07, #FE7633, #FF035F);
+  border-radius: 50px;
+  padding: 2px;
+  font-size: 0.4rem;
+}
+
+#container .content .gift-list li > div .right .gift-detail > div.btn span {
+  display: block;
+  padding: 5px 10px 7px 10px;
+  background: linear-gradient(90deg, #FD8C00, #FFC300);
+  border-radius: 50px;
+}
+
+#container .footer {
+  display: -webkit-flex;
+  display: flex;
+  display: -moz-box;
+  background: #71007F;
+  color: #fff;
+  padding: 10px;
+  box-shadow: 0px 8px 24px 0px rgba(104, 25, 174, 0.6);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 7;
+}
+
+#container .footer > div {
+  display: -webkit-flex;
+  display: flex;
+  display: -moz-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  flex-grow: 1;
+  font-size: 14px;
+  padding: 0 0 0 0.53333rem;
+}
+
+#container .footer > div:first-child {
+  border-right: 1px solid #A97FFF;
+  padding: 0 0.53333rem 0 0;
+}
+
+#container .footer > div img {
+  width: 0.6rem;
+  height: 0.6rem;
+}
+
+#container .footer > div span {
+  display: inline-block;
+  margin: 0 15px 0 5px;
+}
+
+#container .mask {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  color: #fff;
+  display: none;
+  z-index: 8;
+}
+
+#container .mask .introduction {
+  height: 9.33333rem;
+  width: calc(85% - 40px);
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #470252;
+  box-shadow: 0px 8px 24px 0px rgba(42, 32, 85, 0.6);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#container .mask .introduction .title {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+#container .mask .introduction .title h4 {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 0.42667rem;
+  opacity: 0.6;
+}
+
+#container .mask .introduction .title h4.active {
+  font-size: 0.48rem;
+  opacity: 1;
+}
+
+#container .mask .introduction .introduction-text {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+#container .mask .introduction .record .record-time {
+  display: -webkit-flex;
+  display: flex;
+  display: -moz-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+#container .mask .introduction .record .record-time img {
+  width: 9px;
+  height: 14px;
+  pointer-events: auto;
+}
+
+#container .mask .introduction .record .record-time img.next {
+  transform: rotate(180deg);
+}
+
+#container .mask .introduction .record .record-list {
+  width: calc(100% - 30px);
+  height: 6.4rem;
+  background: #892E97;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10px 15px;
+  overflow-y: scroll;
+}
+
+#container .mask .introduction .record .record-list::-webkit-scrollbar {
+  display: none;
+}
+
+#container .mask .introduction .record .record-list li {
+  display: -webkit-flex;
+  display: flex;
+  display: -moz-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+#container .mask .introduction .record .record-list li div {
+  flex-grow: 1;
+  text-align: center;
+}
+
+#container .mask .buy {
+  width: 90%;
+  height: 10.66667rem;
+  margin: 0 auto;
+  background: #fff;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 15px;
+}
+
+#container .mask .buy .header-img {
+  position: relative;
+  top: -50px;
+  left: -1px;
+  max-width: calc(100% + 2px);
+}
+
+#container .mask .buy .header-tip {
+  width: 2.6rem;
+  height: 0.66667rem;
+  position: relative;
+  top: -40px;
+}
+
+#container .mask .buy .shop-car {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  width: 95%;
+  margin: 20px auto;
+  border-bottom: 1px solid #E9CBFF;
+  padding: 0 0 0.46667rem 0;
+  position: relative;
+  top: -40px;
+}
+
+#container .mask .buy .shop-car > div {
+  color: #7A17C0;
+  font-size: 12px;
+}
+
+#container .mask .buy .shop-car > div:nth-child(odd) {
+  width: 100%;
+}
+
+#container .mask .buy .shop-car .bg {
+  width: 2.05333rem;
+  height: 2.05333rem;
+  background: #5A367A;
+  border-radius: 15px;
+  padding: 2px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px auto;
+}
+
+#container .mask .buy .shop-car .bg > div {
+  background: #bd2cd5;
+  background-size: cover;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#container .mask .buy .shop-car .bg > div img {
+  width: 1.34667rem;
+  height: 1.6rem;
+}
+
+#container .mask .buy .shop-car .bg.right div {
+  background: url("../images/shop-car-bg.png");
+  background-size: cover;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+#container .mask .buy .shop-car .bg.right div img:first-child {
+  width: 1rem;
+  height: 1rem;
+}
+
+#container .mask .buy .shop-car .plus {
+  display: -webkit-flex;
+  display: flex;
+  display: -moz-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  position: relative;
+}
+
+#container .mask .buy .shop-car .plus .line {
+  position: relative;
+  background: #71007F;
+  height: 6px;
+  width: 40px;
+  border-radius: 10px;
+}
+
+#container .mask .buy .shop-car .plus .line.deg-90 {
+  transform: rotate(90deg);
+  position: absolute;
+}
+
+#container .mask .buy .product-num {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  top: -40px;
+}
+
+#container .mask .buy .product-num .bg {
+  background: transparent;
+  width: 1.46667rem;
+  text-align: center;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+#container .mask .buy .product-num .bg.active {
+  background: #F11361;
+}
+
+#container .mask .buy .product-num .bg span {
+  background: #470252;
+  display: block;
+  border-radius: 5px;
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+#container .mask .buy .btn {
+  position: relative;
+  top: -20px;
+  display: inline-block;
+  font-size: 0.48rem;
+  padding: 0 1rem;
+  background: url("../images/btn-bg.png") no-repeat;
+  background-size: 100% 100%;
+  height: 1.33333rem;
+  line-height: 1.13333rem;
+}
+
+#container .mask2 {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  color: #fff;
+  display: none;
+}
+
+#container .mask2 .pay-tip {
+  color: #000;
+  width: 8.53333rem;
+  height: 4.58667rem;
+  margin: auto;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  border-radius: 15px;
+}
+
+#container .mask2 .pay-tip h4 {
+  font-size: 0.56rem;
+  color: #333;
+  font-weight: bolder;
+  margin-top: 0.8rem;
+}
+
+#container .mask2 .pay-tip p {
+  font-size: 0.4rem;
+  color: #595959;
+  margin-top: 0.8rem;
+}
+
+#container .mask2 .pay-tip .m2-btn {
+  border-top: 1px solid #E9CBFF;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#container .mask2 .pay-tip .m2-btn > div {
+  flex-grow: 1;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+#container .mask2 .pay-tip .m2-btn > div:nth-child(even) {
+  border-left: 1px solid #E9CBFF;
+  color: #FD8C00;
+  font-size: 16px;
+}
+
+.list-content {
+  position: relative;
+}
+
+.list-content > .cover {
+  background: linear-gradient(0deg, #892e97, rgba(137, 46, 151, 0.01));
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 25px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.list-content .no-list {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 20px;
+  width: 80px;
+  height: 26px;
+  display: none;
+}
+
+.introduction-img {
+  pointer-events: auto;
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  width: 160px;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 12px;
+  opacity: 0;
+  z-index: 8;
+}
+
+@media screen and (max-width: 320px) {
+  #container .mask .buy .shop-car {
+    width: 100%;
+    padding: 0 0 0.46667rem 0;
+  }
+  #container .mask .buy .shop-car .plus .line.deg-90 {
+    top: 34px !important;
+  }
+  #container .content .gift-list li > div .right .gift-detail > div.btn span {
+    padding: 2px 5px 3px 5px;
+  }
+}

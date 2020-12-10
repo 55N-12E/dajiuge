@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>推荐房间上热门</title>
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="css/roomRecomm.css">
+</head>
+<body>
+  <div class="container">
+    <div class="inputWrapper">
+      <input type="text" placeholder="请输入房主99约号">
+    </div>
+    <div class="buttonWrapper">
+      <div class="button submit">确认推荐</div>
+    </div>
+    <div class="tips">
+      <p class="first">您本月还有<span></span>次推荐机会，</p>
+      <p class="second">每续费一次增加3次推荐机会，请在贵族有效期内使用。</p>
+      <p class="second">推荐后，该房间将出现在热门2小时</p>
+    </div>
+  </div>
+  <div class="mask">
+    <div class="win">
+      <i class="iconClose"></i>
+      <div class="text">是否确认推荐</span></div>
+      <div class="button-wrapper">
+        <div class="button sure">确认</div>
+        <div class="button cancel">取消</div>
+      </div>
+    </div>
+  </div>
+  <div class="toast">
+    <p class="first">推荐成功，稍后生效成功，</p>
+    <p class="second">小秘书将会通知您</p>
+  </div>
+  <div class="errorResult">
+    <div class="win">
+      <p></p>
+    </div>
+  </div>
+  <script src="../../common/js/jquery-3.2.1.min.js"></script>
+  <script src="../../common/js/common.js"></script>
+  <script src="../../common/js/vconsole.min.js"></script>
+  <script src="./js/roomRecomm.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="../../common/css/mescroll.min.css">
+  <link rel="stylesheet" href="./css/list.css">
+  <title>加载中</title>
+  <script src="../../common/js/flexible.js"></script>
+</head>
+<body>
+  <div class="tab-wrapper">
+    <div class="tab active">最新</div>
+    <div class="tab">最热</div>
+    <div class="bar"></div>
+  </div>
+  <div class="content-wrapper tag-content">
+    <div id="tagScroll" class="mescroll">
+      <ul class="list-wrapper" id="tagRoom-list">
+      <!--<ul class="list-101-wrapper" id="tagRoom-list">-->
+      <!-- 房间列表的example -->
+        <!--<li class="room-list">-->
+          <!--<div class="room-msg">-->
+            <!--<div class="intro-icon"></div>-->
+            <!--<div class="avatar"><img src="./images/example.png" alt=""></div>-->
+            <!--<div class="text">-->
+              <!--<div class="nick">akldfjkaljf</div>-->
+              <!--<div class="people-num">43275</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="tag-msg">-->
+            <!--<div class="tag"><img src="./images/example.png" alt=""></div>-->
+            <!--<div class="room-title">akjlfdjklasfjaklsfjaksljfaslkfjasdklfjaklsfjalkjfaskldjfakljf</div>-->
+          <!--</div>-->
+        <!--</li>-->
+      </ul>
+    </div>
+  </div>
+
+  <div class="content-wrapper ktv-content">
+    <div id="ktvLastestScroll" class="mescroll">
+      <ul class="list-wrapper" id="ktv-latest-list">
+
+      </ul>
+    </div>
+    <div id="ktvHotScroll" class="mescroll">
+      <ul class="list-wrapper" id="ktv-hot-list">
+
+      </ul>
+    </div>
+  </div>
+
+  <script type="text/html" id="roomListByTag">
+    {{ each roomListData }}
+    <li class="room-list" data-uid={{ $value.uid }}>
+      <div class="avatar"><img src={{ $value.avatar }} alt=""></div>
+      <div class="text">
+        <div class="room-title">{{ $value.title }}</div>
+        <div class="room-detail">
+          <div class="room-tag"><img src="{{ $value.tagPict }}" alt="" /></div>
+          <span class="people-num">{{ $value.onlineNum }}人在线</span>
+        </div>
+      </div>
+    </li>
+    {{ /each }}
+  </script>
+
+  <script type="text/html" id="roomListByKTV">
+    {{ each roomListData }}
+    <li class="ktv-list bg{{ $index % 4 }}" data-uid={{ $value.roomUid }}>
+      <div class="text">
+        {{ if $value.singingMusicName }}
+          <div class="cur-songname">正在唱:{{ $value.singingMusicName }}</div>
+        {{ else }}
+          <div class="cur-songname">暂无人演唱</div>
+        {{ /if }}
+        <div class="room-title">{{ $value.title }}</div>
+        <div class="people-num">{{ $value.onlineNum }}在线</div>
+      </div>
+      <div class="avatar"><img src={{ $value.avatar }} alt="" /></div>
+    </li>
+    {{ /each }}
+  </script>
+
+  <script type="text/html" id="roomListBy101">
+    {{ each roomListData }}
+    <li class="room-list" data-uid={{ $value.uid }}>
+      <div class="room-msg">
+        <div class="intro-icon"></div>
+        <div class="avatar"><img src={{ $value.avatar }} alt=""></div>
+        <div class="text">
+          <div class="nick">{{ $value.nick }}</div>
+          <div class="people-num">{{ $value.onlineNum }}</div>
+        </div>
+      </div>
+      <div class="tag-msg">
+        {{ if $value.skillTag }}
+          <div class="tag"><img src={{ $value.skillTag }} alt=""></div>
+        {{ else }}
+          <div class="tag"><img src="./images/default-tag.png" alt=""></div>
+        {{ /if }}
+        <div class="room-title">{{ $value.title }}</div>
+      </div>
+    </li>
+    {{ /each }}
+  </script>
+
+  <script src="../../common/js/jquery-3.2.1.min.js"></script>
+  <script src="../../common/js/template-web.js"></script>
+  <script src="../../common/js/common.js"></script>
+  <script src="../../common/js/vconsole.min.js"></script>
+  <script src="../../common/js/mescroll.min.js"></script>
+  <script src="./js/list.js"></script>
+</body>
+</html>

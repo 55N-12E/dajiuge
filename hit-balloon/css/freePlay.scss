@@ -1,0 +1,346 @@
+@function px2rem($px, $rem: 75){
+  @return $px / $rem+rem
+}
+
+@import '..\\..\\../common/css/flex.scss';
+.text-center{
+  text-align: center;
+}
+.d-flex{
+  @include flex()
+}
+
+html, body{
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  user-select:none;
+  height: 100%;
+}
+input{
+  user-select: auto;
+}
+img{
+  max-width: 100%;
+  pointer-events: none;
+}
+i{
+  font-style: normal;
+}
+
+#main{
+  position: relative;
+  background: #4d0089;
+
+  .mission-list{
+    width: 90%;
+    margin: 0 auto;
+    position: absolute;
+    top: px2rem(750);
+    left: 0;
+    right: 0;
+    z-index: 4;
+
+    .header{
+      position: relative;
+      top: 19px;
+    }
+  
+    .content{
+      color: #fff;
+      border: 3px solid;
+      border-image:linear-gradient(0deg, #7620B8, #B212F5, #FFDF10) 3 3;
+      background: #8E1FE4;
+      padding: px2rem(50) 15px;
+
+      .mission{
+        margin-bottom: 35px;
+
+        &:last-child{
+          margin: 0;
+        }
+        
+        .top{
+          @include flex();
+          @include flex-align-center;
+          @include flex-justify-between;
+
+          padding-bottom: 10px;
+
+          >p{
+            position: relative;
+            width: 65%;
+
+            .m-banner{
+              width: px2rem(440);
+              height: px2rem(74);
+              position: relative;
+              left: -28px;
+            }
+
+            >span{
+              font-size: px2rem(28);
+              position: absolute;
+              top: 7px;
+              left: -10px;
+              display: inline-block;
+              width: 100%;
+            }
+          }
+        }
+
+        .mid{
+          @include flex();
+          @include flex-justify-between;
+          @include flex-align-center;
+
+          border: 1px solid #AD51F4;
+          background: #7617C0;
+          padding: 20px 15px;
+        
+          .left{
+            @include flex();
+            @include flex-align-center;
+
+            >img:nth-child(1){
+              width: px2rem(57);
+              height: px2rem(69);
+              margin-right: 15px;
+            }
+
+            .reward-list{
+              img{
+                width: px2rem(96);
+                height: px2rem(130);
+                margin-right: 7px;
+              }
+            }
+          }
+
+          .right{
+            color: #fff;
+            text-align: right;
+            
+            p:nth-child(1){
+              font-size: px2rem(28);
+              padding-bottom: 10px;
+            }
+            p:nth-child(2){
+              font-size: 12px;
+              color: #D5B1F1;
+
+              .point{
+                color: #FF9E62
+              }
+            }
+          }
+        }
+
+        .bottom{
+          margin-top: 10px;
+
+          span{
+            background: #7617C0;
+            color: #D5B1F1;
+            padding: 3px 15px;
+            border-radius: 5px;
+            display: inline-block;
+          }
+        }
+
+        .btn{
+          background: #B26CF3;
+          border-radius: 50px;
+          padding: 5px 15px;
+          position: relative;
+          top: -2px;
+        }
+        .btn-finish{
+          color: #D5B1F1;
+        }
+        .btn-done{
+          color: #fff;
+          background: #FF9E62;
+        }
+        .btn-not{
+          color: #fff;
+        }
+      }
+      
+    }
+
+    >img{
+      position: absolute;
+    
+      &.r-1{
+        right: -18px;
+        top: 270px;
+        width: px2rem(26);
+        height: px2rem(35);
+      }
+      &.r-2{
+        right: -18px;
+        top: 230px;
+        width: px2rem(65);
+        height: px2rem(90);
+      }
+      &.r-3{
+        right: -16px;
+        top: 715px;
+        width: px2rem(30);
+        height: px2rem(48);
+      }
+      &.r-4{
+        right: -15px;
+        top: 1150px;
+        width: px2rem(50);
+        height: px2rem(65);
+      }
+      &.r-5{
+        right: -18px;
+        top: 1595px;
+        width: px2rem(90);
+        height: px2rem(115);
+      }
+
+      &.l-1{
+        left: -19px;
+        top: 500px;
+        width: px2rem(45);
+        height: px2rem(65);
+      }
+      &.l-2{
+        left: -19px;
+        top: 900px;
+        width: px2rem(59);
+        height: px2rem(89);
+      }
+      &.l-3{
+        left: -20px;
+        top: 1270px;
+        width: 20px;
+        height: 24px;
+      }
+    }
+  }
+
+  .footer{
+    position: relative;
+    z-index: 3;
+    background: #4d0089;
+
+    p{
+      background: transparent;
+      color: #D5B1F1;
+      position: absolute;
+      left: 0;
+      right: 0;
+      text-align: center;
+      bottom: 30px;
+    }
+  }
+}
+
+.explain{
+  width: px2rem(60);
+  height: px2rem(168);
+  position: fixed;
+  right: 0;
+  top: 55%;
+  z-index: 4;
+  pointer-events: auto;
+}
+
+#mask{
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: none;
+
+  .m-content{
+    background: #fff;
+    width: calc(100% - 100px);
+    border-radius: 10px;
+    margin: auto;
+    height: px2rem(960);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: px2rem(50) 20px;
+    overflow-y: scroll;
+
+    h4{
+      font-size: px2rem(32);
+      margin-bottom: 12px;
+
+      span{
+        position: relative;
+        display: inline-block;
+
+        i{
+          position: absolute;
+          display: inline-block;
+          width: 100%;
+          height: 15px;
+          background: #6C00A2;
+          left: 0;
+          top: 10px;
+          opacity: 0.3;
+        }
+      }
+    }
+
+    .explain-text{
+      margin-bottom: 20px;
+    }
+
+    img{
+      margin: 10px 0 15px 0;
+    }
+    .step1{
+      width: px2rem(88);
+      height: px2rem(88);
+    }
+    .step2{
+      width: px2rem(440);
+      height: px2rem(64);
+    }
+    .step3{
+      width: px2rem(356);
+      height: px2rem(120);
+    }
+    .step4{
+      width: px2rem(494);
+      height: px2rem(48);
+    }
+    .step5{
+      width: px2rem(494);
+      height: px2rem(658);
+    }
+
+  }
+}
+
+.toast{
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  padding: 5px 15px;
+  color: #fff;
+  z-index: 5;
+  font-size: 16px;
+  width: 80px;
+  text-align: center;
+  display: none;
+}

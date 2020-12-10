@@ -1,0 +1,938 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  user-select:none; 
+}
+input{
+  user-select: auto;
+}
+
+img {
+  width: 100%;
+  vertical-align: top;
+  pointer-events: none;
+}
+
+/* 清除浮动 */
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+.text-center{
+  text-align:center;
+}
+.d-flex{
+  display: flex;
+}
+
+.mask{
+  height: 100%;
+  background: rgba(0, 0, 0, .6);
+  overflow: hidden;
+}
+
+/* 游戏 */
+.game-zone{
+  height: 14.30667rem;
+  background: url("../images/bg.jpg")no-repeat;
+  background-size: cover;
+  position: absolute;
+  border-radius: 20px 20px 0 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.game-zone .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 75px;
+  padding-top: 0.5rem;
+}
+.game-zone .top>div:nth-child(odd) img{
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+}
+.game-zone .mid{
+  position: relative;
+  top: 0.5rem;
+}
+/* 气球开始 */
+.game-zone .mid .balloon{
+  position: absolute;
+  background: url("../images/balloon.png")no-repeat;
+  background-size: cover;
+  width: 1.8rem;
+  height: 4.7rem;
+}
+.game-zone .mid .balloon-g{
+  position: absolute;
+  background: url("../images/balloon-g.png")no-repeat;
+  background-size: cover;
+  width: 2rem;
+  height: 4.9rem;
+  display: none;
+  transform: scale(0.7);
+}
+.game-zone .mid .ball-left-1{
+  background-position: 85% -25px;
+  animation: balloon1 5s linear infinite;
+  -webkit-animation: balloon1 5s linear infinite;
+}
+.game-zone .mid .ball-g-left-1{
+  background-position: 84% -25px;
+  animation: balloon1 5s linear infinite;
+  -webkit-animation: balloon1 5s linear infinite;
+}
+.game-zone .mid .ball-left-2{
+  background-position: 46% -15px;
+  top: 85px;
+  left: 45px;
+  animation: balloon2 5s ease-out infinite;
+  -webkit-animation: balloon2 5s linear infinite;
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+}
+.game-zone .mid .ball-g-left-2{
+  background-position: 60% -10px;
+  top: 85px;
+  left: 45px;
+  animation: balloon2 5s ease-out infinite;
+  -webkit-animation: balloon2 5s linear infinite;
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+}
+.game-zone .mid .ball-left-3{
+  background-position: 59% -15px;
+  top: 0;
+  left: 84px;
+  animation: balloon3 5s ease infinite;
+  -webkit-animation: balloon3 5s linear infinite;
+}
+.game-zone .mid .ball-g-left-3{
+  background-position: calc(73% + 5px) -15px;
+  top: 0;
+  left: 84px;
+  animation: balloon3 5s ease infinite;
+  -webkit-animation: balloon3 5s linear infinite;
+}
+.game-zone .mid .ball-left-4{
+  background-position: 4% -10px;
+  top: 67px;
+  left: 138px;
+  animation: balloon4 5s linear infinite;
+  -webkit-animation: balloon4 5s linear infinite;
+}
+.game-zone .mid .ball-g-left-4{
+  background-position: calc(5% + 3px) 0px;
+  top: 67px;
+  left: 120px;
+  animation: balloon4 5s linear infinite;
+  -webkit-animation: balloon4 5s linear infinite;
+  width: 2.1rem;
+}
+.game-zone .mid .ball-left-5{
+  background-position: 18% -15px;
+  top: -7px;
+  left: 198px;
+  animation: balloon5 5s linear infinite;
+  -webkit-animation: balloon5 5s linear infinite;
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+}
+.game-zone .mid .ball-g-left-5{
+  background-position: calc(20% + 3px) -2px;
+  top: -7px;
+  left: 200px;
+  animation: balloon5-g 5s linear infinite;
+  -webkit-animation: balloon5-g 5s linear infinite;
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+}
+.game-zone .mid .ball-left-6{
+  background-position: 32% -15px;
+  top: 62px;
+  left: 220px;
+  animation: balloon6 5s linear infinite;
+  -webkit-animation: balloon6 5s linear infinite;
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+}
+.game-zone .mid .ball-g-left-6{
+  background-position: calc(34% + 5px) -15px;
+  top: 75px;
+  left: 220px;
+  animation: balloon6-g 5s linear infinite;
+  -webkit-animation: balloon6-g 5s linear infinite;
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+}
+.game-zone .mid .ball-left-7{
+  background-position: 72% -15px;
+  top: 86px;
+  left: 281px;
+  animation: balloon7 3s linear infinite;
+  -webkit-animation: balloon7 5s linear infinite;
+}
+.game-zone .mid .ball-g-left-7{
+  background-position: 72% -15px;
+  top: 86px;
+  left: 281px;
+  animation: balloon7 3s linear infinite;
+  -webkit-animation: balloon7 5s linear infinite;
+}
+.game-zone .mid .ball-left-8{
+  background-position: 4% -15px;
+  top: 15px;
+  right: 0;
+  animation: balloon8 5s linear infinite;
+  -webkit-animation: balloon8 5s linear infinite;
+}
+.game-zone .mid .ball-g-left-8{
+  background-position: 5% -3px;
+  top: -5px;
+  right: 5px;
+  animation: balloon8-g 5s linear infinite;
+  -webkit-animation: balloon8-g 5s linear infinite;
+}
+/* 气球结束 */
+
+.game-zone .mid .tip{
+  position: absolute;
+  width: 180px;
+  background: #D5883A;
+  border-radius: 0 20px 20px 0;
+  top: -25px;
+  padding: 7px 0 7px 10px;
+}
+.game-zone .mid .tip>img{
+  width: 15px;
+  height: 15px;
+}
+.game-zone .mid .tip span{
+  color: #fff;
+  font-size: 12px;
+}
+.game-zone .mid .ag>span{
+  color: #0a6e91;
+  text-shadow: 1px 1px 0px #fff;
+  font-size: 13px;
+  position: absolute;
+  right: -8px;
+  font-weight: bolder;
+}
+
+.switch-slingshot{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.switch-slingshot>div{
+  width: 110px;
+  height: 61px;
+  background: url("../images/slingshot-pick.png")no-repeat;
+  background-size: cover;
+}
+.switch-slingshot>div.gold{
+  background-position: -172px 0;
+}
+.switch-slingshot>div.gold.active{
+  background-position: -33px 0;
+}
+.switch-slingshot>div.wood{
+  background-position: -448px 0;
+}
+.switch-slingshot>div.wood.active{
+  background-position: -310px 0;
+}
+
+.game-zone .bottom{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+}
+.game-zone .bottom .stone-detail{
+  background: #A2C91B;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: calc(100% - 30px);
+  padding: 10px 15px;
+  z-index: 3;
+  height: 40px;
+  padding-bottom: 25px;
+}
+.game-zone .bottom .stoneNum{
+  display: flex;
+  align-items: center;
+  background: #82A116;
+  border-radius: 50px;
+  padding: 3px 15px 3px 10px;
+  font-size: 0.4rem;
+}
+.game-zone .bottom .stoneNum>img{
+  width: 31px;
+  height: 32px;
+  padding-right: 5px;
+}
+.game-zone .bottom .getStone{
+  background: url("../images/getStoneBG.png")no-repeat;
+  background-size: cover;
+  padding: 10px 23px;
+  font-size: 0.4rem;
+}
+
+.game-set{
+  position: relative;
+  z-index: 3;
+  padding: 0 0 15px 0;
+}
+.game-on .on-box1{
+  display:inline-block;
+  width: calc(40% - 20px);
+  background: rgba(0, 0, 0, .2);
+  border-radius: 50px;
+  padding: 5px;
+}
+.game-on .on-box2{
+  background: rgba(0, 0, 0, .4);
+  border-radius: 50px;
+  padding: 10px 0 7px 0;
+}
+.game-time{
+  margin-top: 10px;
+  color: #fff;
+  font-size: 0.45rem;
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+}
+.game-time .more-reward{
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  font-size: 13px;
+  color: #FFE26E;
+  text-shadow: 0px 1px 0px rgba(168,96,31,1);
+}
+.game-time .time-box1{
+  background: rgba(255, 255, 255, .2);
+  padding: 4px;
+  border-radius: 0.32rem;;
+}
+.game-time .time-box2{
+  background: rgba(0, 0, 0, .2);
+  border-radius: 10px;
+  padding: 0 0 2px 0;
+  text-shadow:0px 2px 0px rgba(129,156,12,1);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.game-time .time-box1.active{
+  background: #A8601F;
+}
+.game-time .time-box1.active .time-box2{
+  background: #D5883A;
+  text-shadow:0px 2px 0px rgba(168,96,31,1);
+}
+.animate_gift0{
+  position: absolute;
+  top: 67px;
+  left: 138px;
+  width: 70px;
+  height: 70px;
+  transform: scale(0);
+  animation: animate_hitballon1 0.7s linear 1, animate_hitballon2 1s linear 1s 1, animate_hitballon3 1s cubic-bezier(0.44, 0, 1, 0.63) 1s 1;
+  animation-fill-mode: forwards;
+}
+.animate_gift1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  transform: scale(0);
+  animation: animate_hitballon1 0.7s linear 0.2s 1, animate_hitballon2 1s linear 1s 1, animate_hitballon3 1s cubic-bezier(0.44, 0, 1, 0.63) 1s 1;
+  animation-fill-mode: forwards;
+}
+.animate_gift2{
+  position: absolute;
+  top: 100px;
+  left: 43px;
+  width: 70px;
+  height: 70px;
+  transform: scale(0);
+  animation: animate_hitballon1 0.7s linear 0.4s 1, animate_hitballon2 1s linear 1s 1, animate_hitballon3 1s cubic-bezier(0.44, 0, 1, 0.63) 1s 1;
+  animation-fill-mode: forwards;
+}
+.animate_gift3{
+  position: absolute;
+  top: 5px;
+  left: 80px;
+  width: 70px;
+  height: 70px;
+  transform: scale(0);
+  animation: animate_hitballon1 0.7s linear 0.6s 1, animate_hitballon2 1s linear 1s 1, animate_hitballon3 1s cubic-bezier(0.44, 0, 1, 0.63) 1s 1;
+  animation-fill-mode: forwards;
+}
+.animate_gift4{
+  position: absolute;
+  top: 0;
+  left: 190px;
+  width: 70px;
+  height: 70px;
+  transform: scale(0);
+  animation: animate_hitballon1 0.7s linear 0.6s 1, animate_hitballon2 1s linear 1s 1, animate_hitballon3 1s cubic-bezier(0.44, 0, 1, 0.63) 1s 1;
+  animation-fill-mode: forwards;
+}
+.animate_gift5{
+  position: absolute;
+  top: 83px;
+  left: 280px;
+  width: 70px;
+  height: 70px;
+  transform: scale(0);
+  animation: animate_hitballon1 0.7s linear 0.4s 1, animate_hitballon2 1s linear 1s 1, animate_hitballon3 1s cubic-bezier(0.44, 0, 1, 0.63) 1s 1;
+  animation-fill-mode: forwards;
+}
+.animate_gift6{
+  position: absolute;
+  top: 60px;
+  left: 220px;
+  width: 70px;
+  height: 70px;
+  transform: scale(0);
+  animation: animate_hitballon1 0.7s linear 0.5s 1, animate_hitballon2 1s linear 1s 1, animate_hitballon3 1s cubic-bezier(0.44, 0, 1, 0.63) 1s 1;
+  animation-fill-mode: forwards;
+}
+.animate_gift7{
+  position: absolute;
+  top: 15px;
+  left: 295px;
+  width: 70px;
+  height: 70px;
+  transform: scale(0);
+  animation: animate_hitballon1 0.7s linear 0.5s 1, animate_hitballon2 1s linear 1s 1, animate_hitballon3 1s cubic-bezier(0.44, 0, 1, 0.63) 1s 1;
+  animation-fill-mode: forwards;
+}
+
+/* 奖励 */
+.mask>.mask{
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  background: rgba(0, 0, 0, .6);
+  overflow: hidden;
+  padding: 0;
+  display: none;
+}
+.mask>.mask .notEnough{
+  background: #fff;
+  border-radius: 15px;
+  height: 125px;
+  width: 50%;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  font-size:0.4rem;
+  margin: auto;
+  display: none;
+  padding-bottom: 0.3rem;
+}
+.mask>.mask .notEnough>img{
+  margin-top: -25px;
+}
+.mask>.mask .notEnough p{
+  margin: 10px 0 15px 0;
+}
+.mask>.mask .notEnough span{
+  display: inline-block;
+  background: #A2C91B;
+  color: #fff;
+  padding: 0 10px 3px 10px;
+  border-radius: 50px;
+}
+
+/* 打气球记录 排行榜 */
+.record, .rank, .rule{
+  width: 85%;
+  background: #34AA45;
+  border: 4px solid #C5FEA2;
+  border-bottom: none !important;
+  height: calc(14.30667rem - 4px - 10px);
+  margin: 0 auto;
+  border-radius: 20px 20px 0 0;
+  padding: 10px 10px 0 10px;
+  position: absolute;
+  color: #fff;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  display: none;
+}
+.rank{
+  background: #302413;
+  border: 4px solid #FFD896;
+}
+.rule{
+  background: #0087DD;
+  border: 4px solid #82E0FF;
+}
+.exit{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  z-index: 4;
+  pointer-events: auto;
+}
+.record-top, .rank-top, .rule-top{
+  color: #177525;
+  font-size: 0.5rem;
+  padding-bottom: 0.9rem;
+}
+.rank-top{
+  color: #C88221;
+}
+.rule-top{
+  color: #1C6E99;
+}
+.record-top img, .rank-top img, .rule-top img{
+  width: 60%;
+  margin-top: -11px;
+}
+.record-top span, .rank-top span, .rule-top span{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 4px;
+  margin: auto;
+  font-weight: 500;
+}
+.record-mid .switch-btn p, .rank-mid .switch-btn p{
+  width: 50%;
+  position: relative;
+  font-size: 0.45rem;
+}
+.record-mid>div p.active, .rank-mid>div p.active{
+  font-size: 0.55rem;
+  font-weight: bolder;
+}
+.record-mid>div .line, .rank-mid>div .line{
+  height: 2px;
+  width: 40px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  margin: auto;
+  display: none;
+}
+.record-mid>div p.active .line, .rank-mid>div p.active .line{
+  display: block;
+}
+.record-mid .record-time, .rank-mid .rank-time{
+  margin: 15px 0;
+  font-size: 0.45rem;
+  align-items: center;
+  justify-content: center;
+}
+.record-mid .record-time img, .rank-mid .rank-time img{
+  width: 9px;
+  height: 14px;
+  pointer-events: auto;
+  padding: 10px;
+}
+.record-mid .record-time img:last-child, .rank-mid .rank-time img:last-child{
+  transform:rotate(180deg);
+}
+.record-mid .record-list, .rank-mid .rank-list{
+  font-size: 0.4rem;
+  overflow-y: scroll;
+  position:relative;
+}
+.rank-mid .rank-list{
+  margin-top: 20px;
+}
+.rank-mid .rank-list::-webkit-scrollbar{
+  display: none;
+}
+.record-mid .record-list::-webkit-scrollbar-track-piece{
+  background: transparent;
+}
+.record-mid .record-list::-webkit-scrollbar-thumb{
+  background: #C5FEA2;
+}
+.record-mid .record-list>div .d-flex, .rank-mid .rank-list>.d-flex{
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.record-mid .record-list>div .d-flex:last-child{
+  margin-bottom: 0;
+}
+.record-mid .record-list>.d-flex:last-child, .rank-mid .rank-list>.d-flex:last-child{
+  margin-bottom: 0;
+}
+
+.rank-list .user-detail, .rank-list .user-count{
+  align-items: center;
+}
+.rank-list>div{
+  justify-content: space-between;
+}
+.rank-list .user-avatar{
+  width: 61px;
+  height: 61px;
+  margin: 0 0.3rem;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.toushi{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.bojin-hd{
+  background: url("../images/bojin-toushi.png")0 -10px no-repeat;
+  background-size: cover;
+}
+.huangjin-hd{
+  background: url("../images/huangjin-toushi.png")0 -10px no-repeat;
+  background-size: cover;
+}
+.xingyao-hd{
+  background: url("../images/xingyao-toushi.png")0 -10px no-repeat;
+  background-size: cover;
+}
+.zuanshi-hd{
+  background: url("../images/zuanshi-toushi.png")0 -10px no-repeat;
+  background-size: cover;
+}
+.user-avatar img{
+  border-radius: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.rank-list .badge>img{
+  width: 0.7rem;
+  height: 0.7rem;
+}
+.rank-mid .rank-list>.d-flex{
+  font-size: 0.4rem;
+  margin-bottom: 15px;
+}
+.rank-list .user-name{
+  margin-bottom: 3px;
+}
+.rank-list .gender{
+  width: 0.53333rem;
+  height: 0.53333rem;
+}
+
+/* 玩法介绍 */
+.rule-content{
+  height: 8rem;
+  overflow-y: scroll;
+  padding-right: 15px;
+}
+.rule-content::-webkit-scrollbar-track-piece{
+  background: transparent;
+}
+.rule-content::-webkit-scrollbar-thumb{
+  background: #4ED3FF;
+}
+.rule-content>h4{
+  font-size: 0.5rem;
+}
+.rule-content>p{
+  font-size: 0.4rem;
+}
+.rule-content .gift-list{
+  border-radius: 8px;
+  border: 1px solid #FFFAA2;
+  overflow: hidden;
+  margin: 15px 0 15px auto;
+  width: 96%;
+}
+table{
+  width: 100%;
+}
+table th{
+  padding: 5px 0;
+}
+table td{
+  padding: 10px;
+}
+table td>img{
+  width: 50px;
+  height: 50px;
+}
+table th:nth-child(even){
+  border-left: 1px solid #8E2DFE;
+  border-right: 1px solid #8E2DFE;
+}
+table tr{
+  border-top: 1px solid #8E2DFE;
+}
+table tr>td:nth-child(even){
+  border-left: 1px solid #8E2DFE;
+  border-right: 1px solid #8E2DFE;
+}
+table tr>td{
+  vertical-align: middle;
+  text-align: center;
+}
+.th-bg1{
+  background: linear-gradient(90deg, #495ad6, #6d54e2);
+}
+.th-bg2{
+  background: linear-gradient(90deg, #6d54e2, #9f4df3);
+}
+.th-bg3{
+  background: linear-gradient(90deg, #9f4df3, #c448ff);
+}
+.rule-content p{
+  margin: 10px 0;
+  padding-left: 10px;
+}
+
+.toast{
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  width: 160px;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, .6);
+  color: #fff;
+  border-radius: 12px;
+  opacity: 0;
+  z-index: 4;
+}
+
+.reload{
+  background: rgba(0, 0, 0, .6);
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  top: 0;
+  font-size: 20px;
+  border-radius: 20px 20px 0 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.reload>div{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+
+
+
+@keyframes balloon1{
+  0%{
+    top: 0;
+    left: 0;
+  }
+  50%{
+    top: 15px;
+    left: -10px;
+  }
+  75%{
+    right: 10px;
+    left: 0;
+  }
+  100%{
+    top: 0;
+    left: auto;
+    right: auto;
+  }
+}
+
+@keyframes balloon2{
+  0%{
+    top: 85px;
+    left: 45px;
+  }
+  50%{
+    top: calc(85px + 15px);
+    left: calc(45px - 10px);
+  }
+  100%{
+    top: 85px;
+    left: 45px;
+  }
+}
+
+@keyframes balloon3{
+  0%{
+    top: 15px;
+    left: calc(84px - 10px);
+  }
+  50%{
+    top: 0;
+    left: 84px;
+  }
+  100%{
+    top: 15px;
+    left: calc(84px - 10px);
+  }
+}
+
+@keyframes balloon4{
+  0%{
+    top: 67px;
+  }
+  50%{
+    top: calc(67px - 30px);
+  }
+  100%{
+    top: 67px;
+  }
+}
+
+@keyframes balloon5{
+  0%{
+    left: 198px;
+  }
+  50%{
+    left: calc(198px - 30px);
+  }
+  100%{
+    left: 198px;
+  }
+}
+@keyframes balloon5-g{
+  0%{
+    left: 200px;
+  }
+  50%{
+    left: calc(200px - 30px);
+  }
+  100%{
+    left: 200px;
+  }
+}
+
+@keyframes balloon6{
+  0%{
+    top: 62px;
+    left: 220px;
+  }
+  50%{
+    top: calc(62px + 15px);
+    left: calc(220px - 15px);
+  }
+  100%{
+    left: 220px;
+  }
+}
+@keyframes balloon6-g{
+  0%{
+    top: 75px;
+    left: 220px;
+  }
+  50%{
+    top: calc(75px + 15px);
+    left: calc(220px - 15px);
+  }
+  100%{
+    left: 220px;
+  }
+}
+
+@keyframes balloon7{
+  0%{
+    left: 281px;
+  }
+  25%{
+    left: calc(281px + 5px);
+  }
+  50%{
+    left: 281px;
+  }
+  75%{
+    left: calc(281px - 10px);
+  }
+  100%{
+    left: 281px;
+  }
+}
+
+@keyframes balloon8{
+  0%{
+    top: 15px;
+  }
+  50%{
+    top: 25px;
+  }
+  100%{
+    top: 15px;
+  }
+}
+@keyframes balloon8-g{
+  0%{
+    top: -5px;
+  }
+  50%{
+    top: 15px;
+  }
+  100%{
+    top: -5px;
+  }
+}
+
+@keyframes animate_hitballon1{
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+@keyframes animate_hitballon2{
+  to{
+    left: 290px;
+  }
+}
+@keyframes animate_hitballon3{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(0.8);
+  }
+  100%{
+    top: -100px;
+    transform: scale(0);
+  }
+}

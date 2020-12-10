@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>打气球</title>
+
+    <link rel="stylesheet" href="../../common/css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="../../common/js/flexible.js"></script>
+  </head>
+  <body>
+    <div id="cover" class="mask">
+      <!-- 游戏 -->
+      <div id="game-zone" class="game-zone">
+        <div class="top">
+          <div class="showRank" style="width:30%;">
+            <img src="./images/rank.png" alt="">
+          </div>
+          <div class="howtoPlay" style="width:40%;">
+            <img src="./images/g-name.png" alt="">
+          </div>
+          <div class="showRecord" style="width:30%;">
+            <img style="width: 61%;" src="./images/record.png" alt="">
+          </div>
+        </div>
+        <div class="mid">
+          <div class="tip">
+            <img src="./images/star.png" alt="" />
+            <span>每日百次内必得珍稀奖品！</span>
+          </div>
+
+          <!-- balloon -->
+          <div style="position: relative;width: 100%;height: 100%;">
+            <div class="balloon ball-left-1"></div>
+            <div class="balloon ball-left-2"></div>
+            <div class="balloon ball-left-3"></div>
+            <div class="balloon ball-left-4"></div>
+            <div class="balloon ball-left-5"></div>
+            <div class="balloon ball-left-6"></div>
+            <div class="balloon ball-left-7"></div>
+            <div class="balloon ball-left-8"></div>
+          </div>
+          <div style="position: relative;top: -20px;width: 100%;height: 100%;">
+            <div class="balloon-g ball-g-left-1"></div>
+            <div class="balloon-g ball-g-left-2"></div>
+            <div class="balloon-g ball-g-left-3"></div>
+            <div class="balloon-g ball-g-left-4"></div>
+            <div class="balloon-g ball-g-left-5"></div>
+            <div class="balloon-g ball-g-left-6"></div>
+            <div class="balloon-g ball-g-left-7"></div>
+            <div class="balloon-g ball-g-left-8"></div>
+          </div>
+
+          <!-- new -->
+          
+        </div>
+        <div class="bottom">
+          <!-- <img src="./images/slingshot.png" class="slingshot" alt=""> -->
+          <div class="switch-slingshot">
+            <div class="wood active" style="margin-right: 0.48rem;"></div>
+            <div class="gold"></div>
+          </div>
+
+          <div class="game-set">
+            <div class="game-on text-center">
+              <div class="on-box1">
+                <div class="on-box2">
+                  <img style="width: 55%;" src="./images/shoot.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="game-time d-flex">
+              <div class="time-box1 text-center active" style="width: 2.2rem;" data-num="1">
+                <div class="time-box2">
+                  <span>1次</span>
+                  <div class="d-flex" style="align-items: center;justify-content: center;margin-top: 2px;font-size: 14px;">
+                    <img src="./images/rock.png" alt="" style="width: 20px;height: 17px;padding: 1px 3px 0 0;" />
+                    <span>1</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="time-box1 text-center" style="width: 2.5rem;" data-num="10">
+                <div class="time-box2">
+                  <span>10次</span>
+                  <div class="d-flex" style="align-items: center;justify-content: center;margin-top: 2px;font-size: 14px;">
+                    <img src="./images/rock.png" alt="" style="width: 20px;height: 17px;padding: 1px 3px 0 0;" />
+                    <span>10</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="time-box1 text-center" style="width: 3.1rem;" data-num="100">
+                <div class="time-box2">
+                  <span>100次</span>
+                  <div class="d-flex" style="align-items: center;justify-content: center;margin-top: 2px;font-size: 14px;">
+                    <img src="./images/rock.png" alt="" style="width: 20px;height: 17px;padding: 1px 3px 0 0;" />
+                    <span>100</span>
+                  </div>
+                </div>
+              </div>
+              <p class="more-reward">更容易获得大奖~</p>
+            </div>
+          </div>
+
+          <div class="stone-detail">
+            <div class="stoneNum">
+              <img src="./images/rock.png" alt="">
+              <span></span>
+            </div>
+            <div class="getStone">获取石头</div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- 奖励 -->
+      <div id="mask" class="mask">
+          <div class="notEnough text-center">
+            <img src="./images/notEnough-top.png" alt="">
+            <p>对不起，您的石头不足</p>
+            <div class="btn">
+              <span class="getStone">获取石头</span>
+            </div>
+        </div>
+      </div>
+
+      <!-- 记录 -->
+      <div id="record" class="record">
+        <img class="exit" src="./images/exit-record.png" alt="">
+
+        <div class="record-top text-center">
+          <img src="./images/record-top.png" alt="">
+          <span>我的记录</span>
+        </div>
+
+        <div class="record-mid">
+          <div class="switch-btn d-flex">
+            <p class="text-center active" data-type="1">
+              <span>打气球记录</span>
+              <span class="line"></span>
+            </p>
+            <p class="text-center" data-type="2">
+              <span>石头记录</span>
+              <span class="line"></span>
+            </p>
+          </div>
+          <div class="record-time text-center d-flex">
+            <img class="prev" src="./images/flag.png" alt="">
+            <span style="padding: 0 10px;"></span>
+            <img class="next" src="./images/flag.png" alt="">
+          </div>
+
+          <div class="record-list">
+            <div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 排名 -->
+      <div id="rank" class="rank">
+        <img class="exit" src="./images/exit-rank.png" alt="">
+
+        <div class="rank-top text-center">
+          <img src="./images/rank-top.png" alt="">
+          <span>排行榜</span>
+        </div>
+
+        <div class="rank-mid">
+          <div class="switch-btn d-flex">
+            <p class="text-center active" data-type="1">
+              <span>今日榜</span>
+              <span class="line"></span>
+            </p>
+            <p class="text-center" data-type="2">
+              <span>昨日榜</span>
+              <span class="line"></span>
+            </p>
+          </div>
+
+          <div class="rank-list"></div>
+        </div>
+      </div>
+
+      <!-- 怎么玩 -->
+      <div id="rule" class="rule">
+        <img class="exit" src="./images/exit-rule.png" alt="">
+
+        <div class="rule-top text-center">
+          <img src="./images/rule-top.png" alt="">
+          <span>玩法介绍</span>
+        </div>
+
+        <div class="rule-content">
+          <h4>【参与方式】</h4>
+          <p>打气球是12星座之最活动的附属玩法，购买活动指定头饰可获得随机数量石头，石头用于参与打气球玩法。</p>
+          <p>打气球分为木弹弓打气球（1次/1石头）、黄金弹弓打气球（1次/10石头）。</p>
+          <p>每日木弹弓打气球100次内必得珍稀奖品。</p>
+          <h4>【打气球奖励】</h4>
+          <p>黄金弹弓打气球</p>
+          <div class="gift-list goldTable">
+            <table border="0" cellspacing="0" cellpadding="0">
+              <thead>
+                <th class="th-bg1">礼物图标</th>
+                <th class="th-bg2">礼物名称</th>
+                <th class="th-bg3">获得概率</th>
+              </thead>
+              <tbody style="background: #5C05A5;"></tbody>
+            </table>
+          </div>
+          <p>木弹弓打气球</p>
+          <div class="gift-list woodTable">
+            <table border="0" cellspacing="0" cellpadding="0">
+              <thead>
+                <th class="th-bg1">礼物图标</th>
+                <th class="th-bg2">礼物名称</th>
+                <th class="th-bg3">获得概率</th>
+              </thead>
+              <tbody style="background: #5C05A5;"></tbody>
+            </table>
+          </div>
+          <p>珍稀奖品</p>
+          <div class="gift-list rareTable">
+            <table border="0" cellspacing="0" cellpadding="0">
+              <thead>
+                <th class="th-bg1">礼物图标</th>
+                <th class="th-bg2">礼物名称</th>
+                <th class="th-bg3">获得概率</th>
+              </thead>
+              <tbody style="background: #5C05A5;"></tbody>
+            </table>
+          </div>
+          <h4>【其他说明】</h4>
+          <p>1.打气球获得的礼物放到背包里，点开礼物面板即可查看；</p>
+          <p>2.每次打气球100%获得礼物；</p>
+          <p>3.排行榜按照用户获得奖品的总价值排序；</p>
+          <p>4.本玩法仅供娱乐，用户所获产出不可反向兑换成现金或有价值商品，禁止一切线下交易、币商收购等不正当行为；</p>
+          <p>5.本玩法及提供奖品与苹果公司无关，本活动解释权归99约官方所有</p>
+        </div>
+      </div>
+    </div>
+    <!-- <div id="svga" style="width: 100%;height: 45%;position: absolute;bottom: 20px;display: none;overflow: hidden;"></div> -->
+
+    <div class="toast">打气球失败，请稍后再试</div>
+
+    <script src="../../common/js/jquery-3.2.1.min.js"></script>
+    <script src="../../common/js/common.js"></script>
+    <script src="../../common/js/vconsole.min.js"></script>
+    <script src="../../common/js/svga.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+html,
+body {
+  background: #f5f5f5;
+}
+.wrapper {
+  padding-top: 15px;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  align-items: center;
+  padding: 15px 4%;
+  border-bottom: 1px solid #f5f5f5;
+}
+.question .icon {
+  background: url('../images/spirit.png') no-repeat;
+  background-size: 4772.72727273% auto;
+  background-position: 61.5% 72%;
+  width: 14px;
+  height: 14px;
+  transition: all 0.2s;
+}
+.answer {
+  padding: 10px 4%;
+  font-size: 14px;
+  line-height: 18px;
+  overflow: hidden;
+  display: none;
+}
+li.active .question .icon {
+  transform: rotate(90deg);
+}
+li.active .answer {
+  padding: 10px 4%;
+}
+.special {
+  display: none;
+}

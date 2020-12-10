@@ -1,0 +1,185 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slide {
+  width: 100%;
+  height: 6.8rem !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide .img {
+  overflow: hidden;
+  position: absolute;
+  -webkit-transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s, z-index 0.4s;
+  -o-transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s, z-index 0.4s;
+  transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s, z-index 0.4s;
+  width: 8.66667rem;
+  border-radius: 0.4rem;
+}
+
+.slide .img img {
+  width: calc(100%);
+  height: calc(100%);
+}
+
+.slide .img div {
+  width: 2.77333rem;
+  height: 2.77333rem;
+  position: absolute;
+  top: 14% !important;
+}
+
+.slide .img div p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #bd995e;
+  text-shadow: 0px 4px 38px #1e1c1a;
+  background: -o-linear-gradient(130deg, #caa468 0%, #ebc48d 100%);
+  background: linear-gradient(-40deg, #caa468 0%, #ebc48d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.slide .img .nanjue {
+  background: url(../images/example.png) no-repeat;
+  background-position: -16.66667rem -0.13333rem;
+  background-size: 700%;
+  position: absolute;
+  left: 33%;
+}
+
+.slide .img .zijue {
+  background: url(../images/example.png) no-repeat;
+  background-position: -13.86667rem -0.13333rem;
+  background-size: 700%;
+  position: absolute;
+  left: 33%;
+}
+
+.slide .img .houjue {
+  background: url(../images/example.png) no-repeat;
+  background-position: -11.06667rem -0.13333rem;
+  background-size: 700%;
+  position: absolute;
+  left: 33%;
+}
+
+.slide .img .bojue {
+  background: url(../images/example.png) no-repeat;
+  background-position: -8.29333rem -0.13333rem;
+  background-size: 700%;
+  position: absolute;
+  left: 33%;
+}
+
+.slide .img .gongjue {
+  background: url(../images/example.png) no-repeat;
+  background-position: -5.6rem -0.13333rem;
+  background-size: 700%;
+  position: absolute;
+  left: 33%;
+}
+
+.slide .img .guowang {
+  background: url(../images/example.png) no-repeat;
+  background-position: -2.66667rem -0.13333rem;
+  background-size: 700%;
+  position: absolute;
+  left: 33%;
+}
+
+.slide .img .huangdi {
+  background: url(../images/example.png) no-repeat;
+  background-position: 0px -0.13333rem;
+  background-size: 700%;
+  position: absolute;
+  left: 33%;
+}
+
+.slide .img1 {
+  width: 40%;
+  height: 40%;
+  top: 30%;
+  left: -50%;
+  z-index: 1;
+  opacity: 0;
+}
+
+.slide .img2 {
+  width: 60%;
+  height: 60%;
+  top: 16%;
+  left: -53%;
+  z-index: 2;
+}
+
+.slide .img3 {
+  width: 80%;
+  height: 78%;
+  top: 8%;
+  left: 10%;
+  z-index: 3;
+}
+
+.slide .img4 {
+  width: 60%;
+  height: 60%;
+  top: 16%;
+  left: 93%;
+  z-index: 2;
+}
+
+.slide .img5 {
+  width: 40%;
+  height: 40%;
+  top: 30%;
+  left: 110%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.slide-bt {
+  position: absolute;
+  left: 50%;
+  bottom: 13%;
+  z-index: 10;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2% 4%;
+  z-index: 9999;
+  text-align: center;
+}
+
+.nav .add {
+  color: #BD995E;
+  border-bottom: 1px solid #BD995E;
+}
+
+.nav div {
+  height: 20px;
+  background-color: #fff;
+  width: 100%;
+  color: #1A1A1A;
+  font-size: 13px;
+  border-bottom: 2px solid #fff;
+  text-align: center;
+  display: none;
+}
+
+.nav div span {
+  padding-bottom: 0.08rem;
+}

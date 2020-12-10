@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>每日任务</title>
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="./css/day-sign-in.css">
+  <script src="../../common/js/flexible.js"></script>
+</head>
+<body>
+  <div class="day-signIn">
+    <img src="./images/bg.png" alt="">
+    <div class="day-sign-in">
+      <div>
+        <div class="sign-in">
+          <p>已经连续签到&nbsp;<span></span>&nbsp;天</p>
+          
+          <div class="week">
+            <ul class="clearfix"></ul>
+          </div>
+  
+          <div class="btn btn-signin">签到</div>
+          <div class="btn btn-done">已签到</div>
+          <div class="line"></div>
+          <div class="explain clearfix">
+            <div>签到说明</div>
+            <div>每天签到1次领取对应奖励 <br/> (7天一循环，连续签到可领取成就礼包)</div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="mission">
+        <ul class="day"></ul>
+        <ul class="condition"></ul>
+      </div>
+    </div>
+
+    <div class="mask">
+      <div class="signIn-gift">
+        <img src="./images/gift-top.png" alt="">
+        <img class="gift-close" src="./images/gift-close.png" alt="">
+        
+        <div class="gift-detail">
+          <h3>已经连续签到&nbsp;<span>xx</span>&nbsp;天
+            <span class="line"></span>
+          </h3>
+          
+          <ul class="gift-list"></ul>
+          <p style="text-align: center;">以上礼包断签无效</p>
+        </div>
+        <!-- <div class="gift-detail">123</div> -->
+
+        <img src="./images/gift-bottom.png" alt="">
+      </div>
+      
+      <div class="signin-break">
+        <p>你的签到已中断，可选择“重新开始”</p>
+        <p class="re-signin">重新开始</p>
+      </div>
+
+      <div class="mission-tips">
+        <div>
+          <img class="mission-step" src="" alt="">
+          <div class="btn">关闭</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast">
+    <span></span>
+  </div>
+
+  <div id="loading" class="loading d-none">
+    <div id="wrap">
+      <div class="spinner">
+        <div class="spinner-container container1">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+          <div class="circle3"></div>
+          <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container2">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+          <div class="circle3"></div>
+          <div class="circle4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://rcs.99date.hudongco.com/jquery-3.2.1.min.js"></script>
+  <script src="../../common/js/common.js"></script>
+  <script src="../../common/js/vconsole.min.js"></script>
+  <script src='https://static.lkme.cc/linkedme.min.js'></script>
+  <script src="../../common/js/md5.js"></script>
+  <script src="./js/day-sign-in.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+@function px2rem($px, $rem: 75) {
+  @return $px / $rem+rem;
+}
+
+@mixin pic-common-fix($width,$height,$borderRadius:50%) {
+  width: $width;
+  height: $height;
+  overflow: hidden;
+  border-radius: $borderRadius;
+  img{
+    height: 100%;
+  }
+}
+
+@mixin text-overflow {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+@mixin text {
+
+}
+
+
+@import "../../../common/css/flex.scss";
+
+img{
+  width: 100%;
+  vertical-align: top;
+}
+
+.tab-wrapper{
+  @include flex;
+  @include flex-align-center;
+  @include flex-justify-center;
+  position: relative;
+  display: none;
+  .tab{
+    width: px2rem(300);
+    text-align: center;
+    color: #999;
+    line-height: px2rem(92);
+    font-size:16px;
+    &.active{
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+  }
+  .bar{
+    position: absolute;
+    width: 25px;
+    height: 4px;
+    background: #ff894f;
+    border-radius: 2px;
+    bottom: px2rem(11);
+    transition: 0.3s;
+    left: px2rem(200);
+    &.right{
+      left: px2rem(500);
+    }
+  }
+}
+
+.list-wrapper{
+  padding: 0 px2rem(32);
+  li{
+    @include flex();
+    @include flex-align-center;
+    @include flex-justify-between();
+    .text{
+      @include flex-1();
+      overflow: hidden;
+      .room-title{
+        width: 80%;
+        font-size:14px;
+        @include text-overflow;
+      }
+    }
+  }
+  &.ktv{
+    background: #f5f5f5;
+  }
+}
+
+
+.room-list{
+  padding: px2rem(25) 0;
+  border-bottom: 1px solid #ebebeb;
+  .avatar{
+    flex: 0 0 px2rem(92);
+    @include pic-common-fix(px2rem(92),px2rem(92),4px);
+    margin-right: px2rem(28);
+  }
+  .room-title{
+    margin-bottom: 4px;
+  }
+  .text{
+    .room-detail{
+      @include flex();
+      @include flex-align-center;
+      color: #999;
+    }
+    .room-tag{
+      @include pic-common-fix(px2rem(68),px2rem(30),0%);
+      margin-right: 10px;
+    }
+  }
+}
+
+
+.ktv-list{
+  padding: px2rem(30);
+  border-radius: 4px;
+  margin-bottom: px2rem(20);
+  .cur-songname{
+    @include text-overflow;
+    width: 90%;
+    color:#fff;
+    font-size:16px;
+  }
+  .room-title{
+    color:#fff;
+    margin-bottom: px2rem(38);
+  }
+  .people-num{
+    display: inline-block;
+    background: #fff;
+    padding: 0 10px;
+    border-radius: 10px;
+  }
+  .avatar{
+    @include pic-common-fix(px2rem(130),px2rem(130));
+    flex: 0 0 px2rem(130);
+  }
+  &.bg0{
+    background: linear-gradient(to right,#ff7d7e,#ffb66a);
+    .avatar{
+      border: 3px solid #ffbf92;
+    }
+    .people-num{
+      color: #ff7e7e;
+    }
+  }
+  &.bg1{
+  background: linear-gradient(to right,#ff6289,#ff8cb3);
+    .avatar{
+      border: 3px solid #ffa2bf;
+    }
+    .people-num{
+      color: #ff6289;
+    }
+  }
+  &.bg2{
+    background: linear-gradient(to right,#7d62ff,#bc92ff);
+    .avatar{
+      border: 3px solid #c2a5ff;
+    }
+    .people-num{
+      color: #7d62ff;
+    }
+  }
+  &.bg3{
+    background: linear-gradient(to right,#47a2fe,#07d1fe);
+    .avatar{
+      border: 3px solid #50d5fe;
+    }
+    .people-num{
+      color: #47a2fe;
+    }
+  }
+}
+
+.list-101-wrapper{
+  display: flex;
+  padding: 0 px2rem(32);
+  @include flex-wrap();
+  @include flex-justify-between();
+  .room-list{
+    width: px2rem(325);
+    border-bottom: 1px solid transparent;
+    padding-top: px2rem(20);
+    padding-bottom: 0;
+    //&:nth-child(2n+1){
+    //  margin-right: px2rem(34);
+    //}
+  }
+  .room-title{
+    margin-bottom: 0px;
+  }
+  .room-msg{
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    .avatar{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border-radius: 8px;
+    }
+    .intro-icon{
+      position: absolute;
+      width: px2rem(134);
+      height: px2rem(30);
+      top: px2rem(15);
+      left: px2rem(15);
+    }
+    .text{
+      position: absolute;
+      height: px2rem(60);
+      width: 100%;
+      bottom: 0;
+      background: url("../images/mask.png") no-repeat;
+      background-size: 100%;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      @include flex();
+      @include flex-justify-between();
+      @include flex-align-center();
+      color: #fff;
+      padding: 0 px2rem(14);
+      box-sizing: border-box;
+      font-size: 12px;
+    }
+    .nick{
+      width: 60px;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+    .people-num{
+      &:before{
+        display: inline-block;
+        position: relative;
+        bottom: 2px;
+        content: '';
+        height: 10px;
+        width: 8px;
+        background: url("../images/music.png") no-repeat;
+        background-size: 100%;
+        vertical-align: middle;
+        margin-right: 4px;
+      }
+    }
+  }
+  .tag-msg{
+    margin-top: px2rem(16);
+    position: relative;
+    .tag{
+      position: absolute;
+      width: px2rem(110);
+      height: px2rem(34);
+      display: inline-block;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .room-title{
+      text-indent: px2rem(120);
+      word-break: break-all;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      line-height: 18px;
+    }
+  }
+}
+
+.content-wrapper{
+  display: none;
+}
+
+//.ktv-content{
+//  display: none;
+//}
+
+.mescroll{
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  height: auto; /*如设置bottom:50px,则需height:auto才能生效*/
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>勋章晋升</title>
+    <link rel="stylesheet" href="../../common/css/reset.css">
+    <link rel="stylesheet" href="./css/union.css">
+    <style>
+      html,body{
+        height: auto;
+      }
+    </style>
+    <script src="../../common/js/flexible.js"></script>
+  </head>
+  <body>
+    <div class="badge-upgrade">
+      
+      <div class="user-head d-flex">
+        <div class="left d-flex">
+          <div class="user-img">
+            <img src="" alt="" />
+          </div>
+          <div class="user-msg">
+            <p></p>
+            <p>
+              <img class="d-none" src="https://api.99date.hudongco.com/modules/erbanRank/images/lianghao.png" alt="" />
+              <img class="d-none" src="https://api.99date.hudongco.com/modules/erbanRank/images/xinren.png" alt="" />
+              <span></span>
+            </p>
+          </div>
+        </div>
+        <div class="right">
+          <span class="d-none nobadge">暂无勋章</span>
+          <img class="d-none goldbadge" src="./images/gold-play.png" alt="" />
+          <img class="d-none silverbadge" src="./images/silver-play.png" alt="" />
+          <p style="text-align: center;margin-top: 5px;">当前勋章</p>
+        </div>
+      </div>
+
+      <div class="silver">
+        <div class="detail">
+          <img src="./images/silver-play.png" alt="" />
+
+          <div class="experience">
+            <p class="line">
+              <span></span>
+            </p>
+            <p class="growNum">成长值&nbsp;&nbsp;<span><i></i>/300000</span></p>
+          </div>
+          
+          <div class="advantage d-flex">
+            <div class="adv-item">
+              <div class="img d-flex">
+                <img src="./images/s-adv-1.png" alt="" />
+              </div>
+              <p>平台心钻 <br /> 收益加成</p>
+            </div>
+            <div class="adv-item">
+              <div class="img d-flex">
+                <img style="border-radius: 50%;" src="./images/head-silver.gif" alt="" />
+              </div>
+              <p>专属 <br /> 勋章头饰</p>
+            </div>
+            <div class="adv-item">
+              <div class="img d-flex">
+                <img src="./images/silver-play.png" style="transform: scale(1.5);" alt="" />
+              </div>
+              <p>主页专属 <br /> 勋章标识</p>
+            </div>
+            <div class="adv-item">
+              <div class="img d-flex">
+                <img src="./images/silver-star.png" alt="" />
+              </div>
+              <p>房内发言 <br /> 勋章标识</p>
+            </div>
+          </div>
+
+          <div class="btn" data-type="1"></div>
+        </div>
+      </div>
+
+      <div class="gold">
+        <div class="detail">
+          <img src="./images/gold-play.png" alt="" />
+
+          <div class="experience">
+            <p class="line">
+              <span></span>
+            </p>
+            <p class="growNum">成长值&nbsp;&nbsp;<span><i></i>/600000</span></p>
+          </div>
+
+          <div class="advantage d-flex">
+            <div class="adv-item">
+              <div class="img d-flex">
+                <img src="./images/g-adv-1.png" alt="" />
+              </div>
+              <p>平台心钻 <br /> 收益加成</p>
+            </div>
+            <div class="adv-item">
+              <div class="img d-flex">
+                <img src="./images/gold-play.png" alt="" />
+              </div>
+              <p>主页专属 <br /> 勋章标识</p>
+            </div>
+            <div class="adv-item">
+              <div class="img d-flex">
+                <img src="./images/gold-star.png" alt="" />
+              </div>
+              <p>房内发言 <br /> 勋章标识</p>
+            </div>
+            <div class="adv-item">
+              <div class="img d-flex">
+                <img style="border-radius: 50%;" src="./images/head-gold.gif" alt="" />
+              </div>
+              <p>专属 <br /> 勋章头饰</p>
+            </div>
+            <div class="adv-item">
+              <div class="img d-flex">
+                <img src="./images/g-adv-2.png" alt="" />
+              </div>
+              <p>房内上麦 <br /> 昵称高亮</p>
+            </div>
+            <div class="adv-item">
+              <div class="img d-flex">
+                <img src="./images/g-adv-3.png" alt="" />
+              </div>
+              <p>领取勋章 <br /> 全服飘屏</p>
+            </div>
+          </div>
+
+          <div class="btn" data-type="2"></div>
+        </div>
+      </div>
+
+      <div class="badge-rule">
+        <h4>勋章晋升规则</h4>
+        <p>1、所有公会成员默认没有勋章，通过达成成长值可在本页面手动领取勋章（每收到1约豆礼物=1成长值）；领取勋章后即可获得相关权益，权益如上图所示；</p>
+        <p>2、勋章领取后相关权益实时生效；每周日24点，按当周流水达标情况，会重新评定已有勋章用户的勋章等级并自动发放勋章。（没有勋章的用户达标后需手动领取）</p>
+        <p>3、当获得勋章的用户有违规行为时，官方有权对其成长值进行降权操作。</p>
+      </div>
+
+    </div>
+
+    <div class="toast d-none">
+      <span></span>
+    </div>
+
+
+    <script src="../../common/js/jquery-3.2.1.min.js"></script>
+    <script src="../../common/js/common.js"></script>
+    <script src="../../common/js/vconsole.min.js"></script>
+    <script src="./js/badge.js"></script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+html,
+body {
+  height: 100%;
+}
+.container {
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.tips {
+  display: flex;
+  justify-content: space-between;
+  background: #f5f5f5;
+  padding: 16px 4%;
+  align-items: center;
+  display: none;
+}
+.tips span {
+  color: #e9a539;
+}
+.tips .button {
+  background: #fed700;
+  width: 60px;
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+.backgroundList ul {
+  padding: 15px 4%;
+  font-size: 0;
+}
+.backgroundList ul li {
+  position: relative;
+  width: 31%;
+  margin-bottom: 8px;
+  display: inline-block;
+  font-size: 16px;
+}
+.backgroundList ul li:nth-child(3n-1) {
+  margin: 0 3.5% 8px;
+}
+.backgroundList ul li .background {
+  position: relative;
+}
+.backgroundList ul li .background .backImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.backgroundList ul li .background:before {
+  display: block;
+  content: '';
+  padding-top: 177.92792793%;
+}
+.backgroundList ul li .background .badge {
+  display: none;
+  color: #fff;
+  background: #ff3f35;
+  border-radius: 6px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  text-align: center;
+  padding: 2px 4px;
+  font-size: 12px;
+}
+.backgroundList ul li .background .chosen {
+  display: none;
+  background: url('../images/spirit.png') no-repeat;
+  background-size: 2763.15789474% auto;
+  background-position: 100% 74.5%;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -8px;
+  top: -8px;
+  z-index: 50;
+}
+.backgroundList ul li .background .noble {
+  display: none;
+  width: 58px;
+  height: 20px;
+  line-height: 20px;
+  text-align: right;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 3px;
+  z-index: 50;
+  font-size: 12px;
+  box-sizing: border-box;
+  padding-right: 6px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  background: #000;
+}
+.backgroundList ul li .background .noble:before {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  display: inline-block;
+  content: "";
+  background: url('../images/example.png') no-repeat;
+  background-size: 700% auto;
+  background-position: 0 0;
+  left: 0;
+  top: -5px;
+}
+.backgroundList ul li .background .noble.noble-1 {
+  background: #8cabd8;
+}
+.backgroundList ul li .background .noble.noble-1:before {
+  background-position-x: 100%;
+}
+.backgroundList ul li .background .noble.noble-2 {
+  background: #eaaa3a;
+}
+.backgroundList ul li .background .noble.noble-2:before {
+  background-position-x: 83.33333333%;
+}
+.backgroundList ul li .background .noble.noble-3 {
+  background: #4794f1;
+}
+.backgroundList ul li .background .noble.noble-3:before {
+  background-position-x: 66.66666667%;
+}
+.backgroundList ul li .background .noble.noble-4 {
+  background: #4770e6;
+}
+.backgroundList ul li .background .noble.noble-4:before {
+  background-position-x: 50%;
+}
+.backgroundList ul li .background .noble.noble-5 {
+  background: #7963c9;
+}
+.backgroundList ul li .background .noble.noble-5:before {
+  background-position-x: 33.33333333%;
+}
+.backgroundList ul li .background .noble.noble-6 {
+  background: #ff6670;
+}
+.backgroundList ul li .background .noble.noble-6:before {
+  background-position-x: 16.66666667%;
+}
+.backgroundList ul li .background .noble.noble-7 {
+  background: #feaa36;
+}
+.backgroundList ul li .background .noble.noble-7:before {
+  background-position-x: 0%;
+}
+.backgroundList ul li .title {
+  margin-top: 10px;
+}
+.backgroundList ul li.hasAni .badge {
+  display: block;
+}
+.backgroundList ul li.hasNoble .noble {
+  display: block;
+}
+.backgroundList ul li.hasChosen .chosen {
+  display: block;
+}
+#loading {
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+#loading img {
+  width: 24px;
+  height: 24px;
+}

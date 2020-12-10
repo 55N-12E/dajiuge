@@ -1,0 +1,377 @@
+.text-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: -webkit-flex;
+  display: flex;
+  display: -moz-box;
+}
+
+html, body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  height: 100%;
+}
+
+input {
+  user-select: auto;
+}
+
+img {
+  max-width: 100%;
+  pointer-events: none;
+}
+
+i {
+  font-style: normal;
+}
+
+#main {
+  position: relative;
+  background: #4d0089;
+}
+
+#main .mission-list {
+  width: 90%;
+  margin: 0 auto;
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  right: 0;
+  z-index: 4;
+}
+
+#main .mission-list .header {
+  position: relative;
+  top: 19px;
+}
+
+#main .mission-list .content {
+  color: #fff;
+  border: 3px solid;
+  border-image: linear-gradient(0deg, #7620B8, #B212F5, #FFDF10) 3 3;
+  background: #8E1FE4;
+  padding: 0.66667rem 15px;
+}
+
+#main .mission-list .content .mission {
+  margin-bottom: 35px;
+}
+
+#main .mission-list .content .mission:last-child {
+  margin: 0;
+}
+
+#main .mission-list .content .mission .top {
+  display: -webkit-flex;
+  display: flex;
+  display: -moz-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+#main .mission-list .content .mission .top > p {
+  position: relative;
+  width: 65%;
+}
+
+#main .mission-list .content .mission .top > p .m-banner {
+  width: 5.86667rem;
+  height: 0.98667rem;
+  position: relative;
+  left: -28px;
+}
+
+#main .mission-list .content .mission .top > p > span {
+  font-size: 0.37333rem;
+  position: absolute;
+  top: 7px;
+  left: -10px;
+  display: inline-block;
+  width: 100%;
+}
+
+#main .mission-list .content .mission .mid {
+  display: -webkit-flex;
+  display: flex;
+  display: -moz-box;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  border: 1px solid #AD51F4;
+  background: #7617C0;
+  padding: 20px 15px;
+}
+
+#main .mission-list .content .mission .mid .left {
+  display: -webkit-flex;
+  display: flex;
+  display: -moz-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+#main .mission-list .content .mission .mid .left > img:nth-child(1) {
+  width: 0.76rem;
+  height: 0.92rem;
+  margin-right: 15px;
+}
+
+#main .mission-list .content .mission .mid .left .reward-list img {
+  width: 1.28rem;
+  height: 1.73333rem;
+  margin-right: 7px;
+}
+
+#main .mission-list .content .mission .mid .right {
+  color: #fff;
+  text-align: right;
+}
+
+#main .mission-list .content .mission .mid .right p:nth-child(1) {
+  font-size: 0.37333rem;
+  padding-bottom: 10px;
+}
+
+#main .mission-list .content .mission .mid .right p:nth-child(2) {
+  font-size: 12px;
+  color: #D5B1F1;
+}
+
+#main .mission-list .content .mission .mid .right p:nth-child(2) .point {
+  color: #FF9E62;
+}
+
+#main .mission-list .content .mission .bottom {
+  margin-top: 10px;
+}
+
+#main .mission-list .content .mission .bottom span {
+  background: #7617C0;
+  color: #D5B1F1;
+  padding: 3px 15px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+#main .mission-list .content .mission .btn {
+  background: #B26CF3;
+  border-radius: 50px;
+  padding: 5px 15px;
+  position: relative;
+  top: -2px;
+}
+
+#main .mission-list .content .mission .btn-finish {
+  color: #D5B1F1;
+}
+
+#main .mission-list .content .mission .btn-done {
+  color: #fff;
+  background: #FF9E62;
+}
+
+#main .mission-list .content .mission .btn-not {
+  color: #fff;
+}
+
+#main .mission-list > img {
+  position: absolute;
+}
+
+#main .mission-list > img.r-1 {
+  right: -18px;
+  top: 270px;
+  width: 0.34667rem;
+  height: 0.46667rem;
+}
+
+#main .mission-list > img.r-2 {
+  right: -18px;
+  top: 230px;
+  width: 0.86667rem;
+  height: 1.2rem;
+}
+
+#main .mission-list > img.r-3 {
+  right: -16px;
+  top: 715px;
+  width: 0.4rem;
+  height: 0.64rem;
+}
+
+#main .mission-list > img.r-4 {
+  right: -15px;
+  top: 1150px;
+  width: 0.66667rem;
+  height: 0.86667rem;
+}
+
+#main .mission-list > img.r-5 {
+  right: -18px;
+  top: 1595px;
+  width: 1.2rem;
+  height: 1.53333rem;
+}
+
+#main .mission-list > img.l-1 {
+  left: -19px;
+  top: 500px;
+  width: 0.6rem;
+  height: 0.86667rem;
+}
+
+#main .mission-list > img.l-2 {
+  left: -19px;
+  top: 900px;
+  width: 0.78667rem;
+  height: 1.18667rem;
+}
+
+#main .mission-list > img.l-3 {
+  left: -20px;
+  top: 1270px;
+  width: 20px;
+  height: 24px;
+}
+
+#main .footer {
+  position: relative;
+  z-index: 3;
+  background: #4d0089;
+}
+
+#main .footer p {
+  background: transparent;
+  color: #D5B1F1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 30px;
+}
+
+.explain {
+  width: 0.8rem;
+  height: 2.24rem;
+  position: fixed;
+  right: 0;
+  top: 55%;
+  z-index: 4;
+  pointer-events: auto;
+}
+
+#mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: none;
+}
+
+#mask .m-content {
+  background: #fff;
+  width: calc(100% - 100px);
+  border-radius: 10px;
+  margin: auto;
+  height: 12.8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.66667rem 20px;
+  overflow-y: scroll;
+}
+
+#mask .m-content h4 {
+  font-size: 0.42667rem;
+  margin-bottom: 12px;
+}
+
+#mask .m-content h4 span {
+  position: relative;
+  display: inline-block;
+}
+
+#mask .m-content h4 span i {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 15px;
+  background: #6C00A2;
+  left: 0;
+  top: 10px;
+  opacity: 0.3;
+}
+
+#mask .m-content .explain-text {
+  margin-bottom: 20px;
+}
+
+#mask .m-content img {
+  margin: 10px 0 15px 0;
+}
+
+#mask .m-content .step1 {
+  width: 1.17333rem;
+  height: 1.17333rem;
+}
+
+#mask .m-content .step2 {
+  width: 5.86667rem;
+  height: 0.85333rem;
+}
+
+#mask .m-content .step3 {
+  width: 4.74667rem;
+  height: 1.6rem;
+}
+
+#mask .m-content .step4 {
+  width: 6.58667rem;
+  height: 0.64rem;
+}
+
+#mask .m-content .step5 {
+  width: 6.58667rem;
+  height: 8.77333rem;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  padding: 5px 15px;
+  color: #fff;
+  z-index: 5;
+  font-size: 16px;
+  width: 80px;
+  text-align: center;
+  display: none;
+}

@@ -1,0 +1,209 @@
+@function px2rem($px, $rem:75) {
+  @return $px / $rem + rem;
+}
+
+@import '../../../common/css/flex.scss';
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+.max {
+  @include flex();
+  @include flex-justify-start;
+  @include flex-align-center;
+  @include flexv();
+
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+
+  .user-inside {
+    @include flex();
+    @include flex-justify-start;
+    @include flex-align-center;
+    
+    width: px2rem(690);
+    height: px2rem(80);
+    border-radius: 20px;
+    box-shadow: 0px 3px 10px 0px lightgray;
+    margin-top: px2rem(30);
+    position: relative;
+    overflow: hidden;
+
+    .recommend-avatar {
+      width: px2rem(49);
+      height: px2rem(46);
+      position: absolute;
+      left: px2rem(20);
+      top: 50%;
+      margin-top: px2rem(-23);
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    input {
+      width: 100%;
+      height: 100%;
+      @include flex();
+      @include flex-justify-start;
+      @include flex-align-center;
+      padding-left: px2rem(100);
+      outline: none;
+      font-size: 14px;
+      color: #1a1a1a;
+      &::-webkit-input-placeholder {
+        color: #b3b3b3;
+      }
+      &::-moz-input-placeholder {
+        color: #b3b3b3;
+      }
+      &::-ms-input-placeholder {
+        color: #b3b3b3;
+      }
+    }
+  }
+
+  .tip {
+    @include flex();
+    @include flex-justify-center;
+    @include flex-align-center;
+    @include flexv();
+
+    margin-top: px2rem(69);
+    width: px2rem(693);
+
+    p {
+      @include flex();
+      @include flex-justify-between;
+      @include flex-align-center;
+
+      color: #1a1a1a;
+      font-size: 15px;
+      width: 100%;
+      height: px2rem(60);
+
+      &:first-child {
+        border-bottom: 1px solid #ebebeb;
+      }
+
+      span {
+        &.times {
+          color: #ff3852;
+        }
+      }
+    }
+  }
+
+  .recommend-btn {
+    width: px2rem(690);
+    height: px2rem(76);
+    border-radius: 20px;
+    background-color: #CFA96E;
+    position: absolute;
+    bottom: px2rem(140);
+    font-size: 15px;
+    color: #522f0c;
+    opacity: .7;
+    left: 50%;
+    margin-left: px2rem(-345);
+
+    @include flex();
+    @include flex-justify-center;
+    @include flex-align-center;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .mask {
+    width: px2rem(590);
+    height: px2rem(364);
+    border-radius: 5px;
+    background-color: white;
+    @include flex();
+    @include flex-justify-start;
+    @include flex-align-center;
+    @include flexv();
+    position: fixed;
+    z-index: 11;
+    left: 50%;
+    top: 50%;
+    margin-left: px2rem(-295);
+    margin-top: px2rem(-182);
+    display: none;
+
+    .tips {
+      font-size: 16px;
+      color: #333;
+      margin-top: px2rem(59);
+      margin-bottom: px2rem(56);
+    }
+
+    .content {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .mask-btn {
+      width: 100%;
+      margin-top: px2rem(86);
+
+      @include flex();
+      @include flex-justify-around;
+      @include flex-align-center;
+
+      p {
+        color: #ff894f;
+        font-size: 15px;
+        background-color: #f0f0f0;
+        width: px2rem(280);
+        height: px2rem(76);
+        border-radius: 20px;
+
+        @include flex();
+        @include flex-justify-center;
+        @include flex-align-center;
+
+        &.confirm {
+          background-color: #ff894f;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .shade {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .6;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: none;
+  }
+
+  .toast {
+    position: fixed;
+    width: px2rem(500);
+    height: px2rem(100);
+    background-color: black;
+    opacity: .7;
+    border-radius: 5px;
+    left:50%;
+    top: 50%;
+    margin-left: px2rem(-250);
+    margin-top: px2rem(-50);
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    line-height: px2rem(100);
+    display: none;
+  }
+}

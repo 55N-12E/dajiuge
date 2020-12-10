@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>VIP特权</title>
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="./css/homepageList.css">
+  <script src="../../common/js/flexible.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="phoneSys android">
+      <div class="d-flex flex-justify-between" style="flex-wrap: wrap;">
+
+      </div>
+    </div>
+    <div class="phoneSys ios">
+      <div class="d-flex flex-justify-between" style="flex-wrap: wrap;">
+        <div class='vipBox vip-none' data-noble='1'>
+          <img src='./images/viplist-lv1-bg.png'/>
+          <img class='head' src='./images/viplist-lv1-head.png' />
+          <p class='vipDetail vipList-name'>普通会员</p>
+          <p class='vipDetail d-none vipList-lv1-time'>到期时间: <i class='date'></i></p>
+          <div class='isUsing viplist-lv1-using'></div>
+        </div>
+        <div class='vipBox vip-none' data-noble='2'>
+          <img src='./images/viplist-lv2-bg.png'/>
+          <img class='head' src='./images/viplist-lv2-head.png' />
+          <p class='vipDetail vipList-name'>高级会员</p>
+          <p class='vipDetail d-none vipList-lv2-time'>到期时间: <i class='date'></i></p>
+          <div class='isUsing viplist-lv2-using'></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <img src="./images/viplist-bottom.png" style="display: block;" alt="" />
+      <img src="./images/arror.png" class="bottom-arrow" alt="" />
+
+      <div class="vip-bg">
+        <img src="./images/viplist-vip.png" alt="" />
+        <div class="using-detail">
+          <img src="" alt="" />
+          <div class="using-text">
+            <h4></h4>
+            <p>到期时间: <i></i></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="noVip" style="color: #F7B500;font-size: 16px;text-align: center;position: absolute;bottom: 50px;width: 100%;display: none;">当前没有使用VIP特权</div>
+    </div>
+
+    <div class="mask">
+      <div class="vip-right">
+        <div class="bottom-bg"></div>
+        <div class="right-detail">
+          <h4>
+            <img src="" style="width: 50px;height: 50px;margin-right: 5px;" alt="" />
+            <span></span>
+          </h4>
+
+          <div class="right-list">
+            <div class="right-box">
+              <div class="right-img no-0"></div>
+              <div class="right-name">贵族勋章</div>
+            </div>
+            <div class="right-box">
+              <div class="right-img no-1"></div>
+              <div class="right-name">贵族礼物</div>
+            </div>
+            <div class="right-box">
+              <div class="right-img no-2"></div>
+              <div class="right-name">贵族表情</div>
+            </div>
+            <div class="right-box">
+              <div class="right-img no-3"></div>
+              <div class="right-name">进场特效</div>
+            </div>
+            <div class="right-box">
+              <div class="right-img no-4"></div>
+              <div class="right-name">贵族背景</div>
+            </div>
+            <div class="right-box">
+              <div class="right-img no-5"></div>
+              <div class="right-name">头像勋章</div>
+            </div>
+            <div class="right-box">
+              <div class="right-img no-6"></div>
+              <div class="right-name">特殊气泡</div>
+            </div>
+            <div class="right-box">
+              <div class="right-img no-7"></div>
+              <div class="right-name">特殊说话光晕</div>
+            </div>
+            <div class="right-box">
+              <div class="right-img no-8"></div>
+              <div class="right-name">进场隐身</div>
+            </div>
+            <div class="right-box">
+              <div class="right-img no-9"></div>
+              <div class="right-name">榜单隐身</div>
+            </div>
+            <div class="right-box">
+              <div class="right-img no-10"></div>
+              <div class="right-name">专属客服</div>
+            </div>
+            <div class="right-box">
+              <div class="right-img no-11"></div>
+              <div class="right-name">专属靓号</div>
+            </div>
+            <div class="right-box">
+              <div class="right-img no-12"></div>
+              <div class="right-name">推荐上热门</div>
+            </div>
+            <div class="right-box">
+              <div class="right-img no-13"></div>
+              <div class="right-name">防禁言/踢麦</div>
+            </div>
+          </div>
+        </div>
+        <div class="right-bottom">
+          <img src="./images/bg-bottom.png" alt="" />
+          <div class="btn-group">
+            <div class="btn">使用</div>
+            <span class="d-none">到期时间:<i></i></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="loading" class="loading">
+        <div id="wrap">
+          <div class="spinner">
+            <div class="spinner-container container1">
+              <div class="circle1"></div>
+              <div class="circle2"></div>
+              <div class="circle3"></div>
+              <div class="circle4"></div>
+            </div>
+            <div class="spinner-container container2">
+              <div class="circle1"></div>
+              <div class="circle2"></div>
+              <div class="circle3"></div>
+              <div class="circle4"></div>
+            </div>
+          </div>
+          <!-- <div class="text">请稍候...</div> -->
+        </div>
+      </div>
+
+      <div class="mask2">
+        <div class="confirmBox">
+          <h4>您当前正在使用<span style="color: #E6A802;"></span>是否确定切换?</h4>
+          <div class="btn-group">
+            <div class="cancel">取消</div>
+            <div class="confirm">确定</div>
+          </div>
+        </div>
+
+        <div class="privilege-box">
+          <img class="top" src="./images/item-1-3.png" style="margin-top: -2px;" alt="" />
+          <img class="badge" src="" alt="" />
+
+          <h3></h3>
+          <div class="privilege-conten">
+            <h4>权益说明</h4>
+            <p style="margin-bottom: 0.7rem;"></p>
+            <h4>特权展示</h4>
+            <img src="" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast">
+      <span></span>
+    </div>
+  </div>
+
+  <script src="../../common/js/jquery-3.2.1.min.js"></script>
+  <script src="../../common/js/common.js"></script>
+  <script src="../../common/js/vconsole.min.js"></script>
+  <script src="./js/homepageList.js"></script>
+</body>
+</html>

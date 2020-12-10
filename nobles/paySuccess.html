@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>支付成功</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="./css/paySuccess.css">
+</head>
+<body>
+<div class="applyComplete">
+  <div class="progressWrapper">
+    <div class="progress">
+      <p>支付成功</p>
+    </div>
+    <div class="wave1"></div>
+    <div class="wave2"></div>
+  </div>
+  <div class="contentWrapper">
+    <div class="text">
+      <p>订单正在处理...</p>
+      <p>稍后请留意系统消息的通知</p>
+    </div>
+
+  </div>
+</div>
+</body>
+<script src='../../common/js/common.js'></script>
+<script>
+var browser = checkVersion()
+if (browser.app) {
+    if (browser.ios) {
+    } else if (browser.android) {
+      if (androidJsObj && typeof androidJsObj === "object") {
+         window.androidJsObj.upDateUserInfo()
+      }
+    }
+  }
+</script>
+</html>

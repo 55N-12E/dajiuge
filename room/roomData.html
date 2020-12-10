@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>房间数据</title>
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="./css/roomData.css">
+  <script src="../../common/js/flexible.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <ul class="d-flex">
+        <li class="active">今日</li>
+        <li>昨日</li>
+        <li>本周</li>
+        <li>上周</li>
+      </ul>
+      <img class="triangle p-1" src="./images/triangle.png" alt="">
+    </div>
+    <div class="content">
+      <div class="detail">
+        <div class="water">
+          <p class="d-flex" style="align-items: center;justify-content: center;"><img src="./images/allMoney.png" alt="">总流水(约豆)</p>
+          <h4 class="waterNum">-</h4>
+  
+          <div class="rankDetail d-flex">
+            <div class="rank">
+              <p>当前排名</p>
+              <span>-</span>
+            </div>
+            <div class="line"></div>
+            <div class="prev">
+              <p>距上一名还差(约豆)</p>
+              <span>-</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="roomNum">
+          <p class="d-flex" style="align-items: center;justify-content: center;"><img src="./images/roomNum.png" alt=""> 进房总人数(次)</p>
+          <span>-</span>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="title d-flex">
+          <span class="active">魅力榜明细</span>
+          <span>土豪榜明细</span>
+        </div>
+
+        <div class="ulBox charm">
+          <ul class="list-content charmList"></ul>
+        </div>
+        <div class="ulBox rich d-none">
+          <ul class="list-content richList"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="loading" class="loading">
+      <div id="wrap">
+        <div class="spinner">
+          <div class="spinner-container container1">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+          </div>
+          <div class="spinner-container container2">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="toast d-none">
+      <span></span>
+    </div>
+  </div>
+
+  <script src="../../common/js/jquery-3.2.1.min.js"></script>
+  <script src="../../common/js/common.js"></script>
+  <script src="../../common/js/vconsole.min.js"></script>
+  <script src="./js/roomData.js"></script>
+</body>
+</html>

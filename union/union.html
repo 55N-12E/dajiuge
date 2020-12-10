@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的公会</title>
+    <link rel="stylesheet" href="../../common/css/reset.css">
+    <link rel="stylesheet" href="./css/union.css">
+    <script src="../../common/js/flexible.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      
+      <div class="union">
+
+        <h4 class="union-title d-flex">
+          <img class="union-qus" src="./images/qus.png" alt="" style="display: none;" />
+          <img class="user-badge" src="./images/getBadge.png" alt="" style="display: none;" />
+          <p class="d-flex">
+            <img class="gold-union d-none" src="./images/gold-union-s.png" alt="" />
+            <img class="silver-union d-none" src="./images/yinpgh.png" alt="" />
+            <span class="unionName">公会名称名称</span>
+          </p>
+          <img class="union-msg" src="./images/msg.png" alt="" />
+        </h4>
+
+        <div class="union-search">
+          <img src="./images/search.png" alt="" />
+          <input class="searchInput" type="text" placeholder="搜索成员昵称/ID" />
+        </div>
+
+        <div class="member-list">
+          <ul></ul>
+          <div class="list-loading">
+            查询中
+            <span>.</span>
+            <span>.</span>
+            <span>.</span>
+          </div>
+        </div>
+
+        <div class="union-bottom">
+          <div class="chairMan d-none">
+            <div>
+              <h4 class="platformRate">68%</h4>
+              <p>平台收益比例</p>
+            </div>
+            <div class="d-flex">
+              <div class="btn unionData">公会数据</div>
+              <div class="btn detail" style="margin-left: 10px;">资料</div>
+            </div>
+          </div>
+          <div class="member d-none">
+            <div>
+              <h4 class="platformRate">68%</h4>
+              <p>平台收益比例</p>
+            </div>
+            <div>
+              <h4 class="unionRate">0%</h4>
+              <p>我的公会加成</p>
+            </div>
+            <div class="btn detail">资料</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mask d-none">
+        <div class="rule d-none">
+          <h4>公会说明</h4>
+          <p>◆您的公会名称可以独立修改，与聊天室名称无关；</p>
+          <p>◆公会分为普通公会和金牌公会，金牌公会长个人主页会显示【金牌公会】勋章；公会成员可获得【99银牌】【99金牌】勋章及相关权益；具体详细规则请联系官方人员；</p>
+          <p>◆成员加入公会后，Ta的全部礼物收益都将会给公会长进行流水分成。（包括在任意房间收礼、私聊收礼、动态收礼）</p>
+          <p>◆申请加入公会，需公会长同意后才可加入；</p>
+          <p>◆申请退出公会，公会长同意后将立即退出公会；公会长未处理时，申请7天后自动退出公会；</p>
+
+          <div class="btn">知道了</div>
+        </div>
+        <div class="member-join-time d-none">
+          <h4>
+            <img src="./images/join-time-top.png" style="display: block;width: 100%;" alt="" />
+            <div class="d-flex">
+              <p>
+                <img src="./images/gold-badge.png" style="display: none;" alt="" />
+                <img src="./images/silver-badge.png" style="display: none;" alt="" />
+                <span class="unionName"></span>
+                <img class="pen" src="./images/pen.png" alt="" />
+                <a href="https://api.99date.hudongco.com/modules/rule/unionSigninProtocol.html">《公会签约协议》</a>
+              </p>
+              <span class="totalNum">1人</span>
+            </div>
+          </h4>
+          <ul>
+            <li class="d-flex">
+              <span>会长</span>
+              <span class="unionerNum">1人</span>
+            </li>
+            <li class="d-flex">
+              <span>加入0~7天</span>
+              <span class="sevenDayNum">1人</span>
+            </li>
+            <li class="d-flex">
+              <span>加入8~17天</span>
+              <span class="seventyDayNum">1人</span>
+            </li>
+            <li class="d-flex">
+              <span>加入18~32天</span>
+              <span class="thirtyTwoDayNum">1人</span>
+            </li>
+            <li class="d-flex">
+              <span>加入33~55天</span>
+              <span class="fiftyFiveDayNum">1人</span>
+            </li>
+            <li class="d-flex">
+              <span>加入56~83天</span>
+              <span class="eightyThreeDayNum">1人</span>
+            </li>
+            <li class="d-flex">
+              <span>83天以上</span>
+              <span class="eightyThreeMoreDayNum">1人</span>
+            </li>
+          </ul>
+          <div class="btn">申请退出公会</div>
+          <div class="quitMsg d-flex d-none">
+            <p>已申请退出公会，公会会长同意后立即退出否则将于 <i></i> 自动退出</p>
+            <div class="btn">取消申请</div>
+          </div>
+        </div>
+        <div class="union-protocol d-none">
+          <h4>
+            申请加入公会前，请认真阅读并充分了解<a href="#">《公会签约协议》</a>，点击同意即代表你已阅读并同意全部条款
+          </h4>
+          <p class="d-flex">
+            <span class="cancel">取消</span>
+            <span class="confirm">同意并确认</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="mask2 d-none">
+        <div class="editUnionName d-none">
+          <h4>修改公会名称</h4>
+          <input type="text" placeholder="1-6个字" maxlength="6" />
+          <p>每个月可修改<span class="editName-chance">1</span>次，还剩下<span class="remaining">1</span>次</p>
+          <div class="btn">确定</div>
+        </div>
+        <div class="confirmReset d-none">
+          <div class="content">
+            <h4>确定修改公会名字？？</h4>
+            <p class="d-flex">
+              <span class="cancel">取消</span>
+              <span class="confirm">确定</span>
+            </p>
+          </div>
+        </div>
+        <div class="confirmQuit d-none">
+          <div class="content">
+            <h4>确定退出当前公会？？</h4>
+            <p class="d-flex">
+              <span class="cancel">取消</span>
+              <span class="confirm">确定</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="toast d-none">
+        <span></span>
+      </div>
+    </div>
+
+
+    <script src="../../common/js/jquery-3.2.1.min.js"></script>
+    <script src="../../common/js/common.js"></script>
+    <script src="../../common/js/vconsole.min.js"></script>
+    <script src="./js/union.js"></script>
+  </body>
+</html>

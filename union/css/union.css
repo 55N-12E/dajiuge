@@ -1,0 +1,826 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #4252AB, #7583FA);
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  pointer-events: none;
+}
+
+i {
+  font-style: normal;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+.container, .union {
+  height: 100%;
+}
+
+.union-title {
+  justify-content: space-between;
+  width: 87%;
+  margin: 0 auto 0.5rem auto;
+  font-size: 16px;
+  padding-top: 0.5rem;
+}
+
+.union-title img {
+  width: 30px;
+  height: 30px;
+  pointer-events: auto;
+}
+
+.union-title p {
+  align-items: center;
+}
+
+.union-title p img {
+  width: 43px;
+  height: 14px;
+}
+
+.union-title span {
+  display: inline-block;
+  margin: 0 7px;
+}
+
+.union-search {
+  background: rgba(245, 245, 245, 0.18);
+  position: relative;
+  width: 87%;
+  border-radius: 50px;
+  margin: 0 auto 0.7rem auto;
+}
+
+.union-search img {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 10px;
+  top: 10px;
+}
+
+.union-search input {
+  border: none;
+  display: block;
+  width: calc(100% - 20px - 1.2rem);
+  background: transparent;
+  padding: 10px 10px 10px 1.2rem;
+  color: #fff;
+  font-size: 16px;
+}
+
+.union-search input:hover {
+  outline: none;
+}
+
+.union-search input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.member-list {
+  width: calc(95% - 20px);
+  height: calc(100% - 215px);
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+  padding: 15px 10px 50px 10px;
+  color: #000;
+  font-size: 14px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.member-list li {
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.member-list li:last-child {
+  margin-bottom: 0;
+}
+
+.member-list li .left {
+  align-items: center;
+}
+
+.member-list li .left > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+  margin-right: 10px;
+}
+
+.member-list li .left .user-msg {
+  align-items: center;
+}
+
+.member-list li .left .user-msg img {
+  width: 16px;
+  height: 16px;
+}
+
+.member-list li .left .user-msg p {
+  align-items: center;
+}
+
+.member-list li .left .user-id {
+  align-items: center;
+}
+
+.member-list li .left .user-id span {
+  color: #A6A6A6;
+}
+
+.member-list li .right {
+  text-align: center;
+  color: #8D8D8D;
+}
+
+.member-list li .right .join-time img {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 2px;
+}
+
+.member-list li .right .addPercent i {
+  color: #E99D2C;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.member-list .list-loading {
+  color: #6d6d6d;
+  position: absolute;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.union-bottom {
+  background: linear-gradient(90deg, #FEF1DC, #FFDCAB);
+  color: #8F5B0D;
+  padding: 10px 15px;
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - 30px);
+  border-radius: 15px 15px 0 0;
+}
+
+.union-bottom div {
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.union-bottom h4 {
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.union-bottom p {
+  color: #AA7D3C;
+  font-size: 12px;
+}
+
+.union-bottom .btn {
+  border: 1px solid #C79D60;
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+
+.union-history {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.union-history li {
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.union-history li:last-child {
+  margin-bottom: 0;
+}
+
+.union-history li i {
+  color: #FFDCAB;
+}
+
+.union-history li .btn {
+  border-radius: 50px;
+  padding: 5px 15px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50px;
+  color: #E5E7F9;
+}
+
+.union-history li .btn.agreeJoin, .union-history li .btn.agreeQuit {
+  color: #D18203;
+  background: linear-gradient(90deg, #FEF1DC, #FFDCAB);
+}
+
+.union-history li .quit-time {
+  text-align: center;
+}
+
+.mask {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.mask .rule {
+  width: 271px;
+  height: 420px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+  color: #333333;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.mask .rule h4 {
+  margin-bottom: 10px;
+}
+
+.mask .rule p {
+  color: #8F8F8F;
+  font-size: 14px;
+  text-align: left;
+  margin: 5px 0;
+}
+
+.mask .rule .btn {
+  background: linear-gradient(90deg, #A5ADF4, #7F8CFB);
+  width: 193px;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 50px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+.mask .member-join-time {
+  width: 90%;
+  height: 450px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+  border-radius: 17px;
+  font-size: 16px;
+}
+
+.mask .member-join-time h4 {
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+.mask .member-join-time h4 div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.mask .member-join-time h4 div p {
+  align-items: center;
+}
+
+.mask .member-join-time h4 div p a {
+  display: block;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.mask .member-join-time h4 div img {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin: 0 5px;
+  pointer-events: auto;
+}
+
+.mask .member-join-time ul {
+  color: #000;
+  font-size: 14px;
+}
+
+.mask .member-join-time ul li {
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.mask .member-join-time ul li:nth-child(even) {
+  background: #FAFAFA;
+}
+
+.mask .member-join-time > .btn {
+  color: #B2B2B2;
+  text-align: center;
+  padding: 15px 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.mask .member-join-time .quitMsg {
+  color: #B2B2B2;
+  font-size: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.mask .member-join-time .quitMsg .btn {
+  background: linear-gradient(90deg, #A5ADF4, #7F8CFB);
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 10px 6px 10px;
+  border-radius: 50px;
+  width: 20%;
+  text-align: center;
+}
+
+.mask .member-join-time .quitMsg p {
+  width: 65%;
+}
+
+.mask .editUnionName {
+  background: #fff;
+  width: 80%;
+  height: 180px;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  padding: 20px 10px;
+  color: #000;
+  font-size: 14px;
+}
+
+.mask .editUnionName h4 {
+  font-size: 18px;
+}
+
+.mask .editUnionName input {
+  border: 1px solid #000;
+  display: block;
+  width: calc(100% - 20px);
+  background: transparent;
+  padding: 10px;
+  color: #000;
+  font-size: 16px;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+.mask .editUnionName input::-webkit-input-placeholder {
+  color: #000;
+}
+
+.mask .editUnionName input:focus {
+  border-color: #7F8CFB;
+  outline: none;
+}
+
+.mask .editUnionName .btn {
+  background: linear-gradient(90deg, #A5ADF4, #7F8CFB);
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 50px;
+  width: 180px;
+  margin: 20px auto 0 auto;
+  color: #fff;
+}
+
+.mask .union-protocol {
+  width: 80%;
+  height: 150px;
+  border-radius: 20px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  margin: auto;
+  color: #000;
+}
+
+.mask2 {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+}
+
+.mask2 .editUnionName {
+  background: #fff;
+  width: 80%;
+  height: 180px;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  padding: 20px 10px;
+  color: #000;
+  font-size: 14px;
+}
+
+.mask2 .editUnionName h4 {
+  font-size: 18px;
+}
+
+.mask2 .editUnionName input {
+  border: 1px solid #000;
+  display: block;
+  width: calc(100% - 20px);
+  background: transparent;
+  padding: 10px;
+  color: #000;
+  font-size: 16px;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+.mask2 .editUnionName input::-webkit-input-placeholder {
+  color: #000;
+}
+
+.mask2 .editUnionName input:focus {
+  border-color: #7F8CFB;
+  outline: none;
+}
+
+.mask2 .editUnionName .btn {
+  background: linear-gradient(90deg, #A5ADF4, #7F8CFB);
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 50px;
+  width: 180px;
+  margin: 20px auto 0 auto;
+  color: #fff;
+}
+
+.mask2 .confirmReset, .mask2 .confirmQuit {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+}
+
+.mask2 .confirmReset .content, .mask2 .confirmQuit .content {
+  width: 80%;
+  height: 100px;
+  background: #fff;
+  border-radius: 20px;
+  margin: auto;
+  color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.mask2 .confirmReset .content p, .mask2 .confirmQuit .content p {
+  font-size: 14px;
+  color: #fff;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.mask2 .confirmReset .content p span, .mask2 .confirmQuit .content p span {
+  width: 100px;
+  border-radius: 50px;
+  padding: 10px;
+  background: linear-gradient(90deg, #A5ADF4, #7F8CFB);
+}
+
+.mask2 .confirmReset .content p span:first-child, .mask2 .confirmQuit .content p span:first-child {
+  border-right: 1px solid #fff;
+}
+
+.badge-upgrade .user-head {
+  background: #fff;
+  border-radius: 15px;
+  padding: 10px;
+  width: calc(87% - 20px);
+  margin: 0 auto 40px auto;
+  color: #333;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge-upgrade .user-head .left {
+  align-items: center;
+}
+
+.badge-upgrade .user-head .left .user-img {
+  border-radius: 50%;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: #6D7BED;
+  padding: 2px;
+}
+
+.badge-upgrade .user-head .left .user-img img {
+  border-radius: 50%;
+}
+
+.badge-upgrade .user-head .left .user-msg {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.badge-upgrade .user-head .left .user-msg p:last-child {
+  font-size: 14px;
+  color: #999;
+}
+
+.badge-upgrade .user-head .left .user-msg p:last-child img {
+  width: 16px;
+  height: 16px;
+}
+
+.badge-upgrade .user-head .right span {
+  background: #E7EAF7;
+  color: #666;
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+
+.badge-upgrade .user-head .right img {
+  width: 2.21333rem;
+  height: 0.72rem;
+}
+
+.badge-upgrade .silver {
+  background: linear-gradient(315deg, #90ADC6, #8AA4BA, #C8E3FD, #A6CBEF);
+  width: calc(90% - 4px);
+  margin: 0 auto;
+  padding: 2px;
+  border-radius: 20px;
+  margin-bottom: 1.33333rem;
+}
+
+.badge-upgrade .silver .detail {
+  border-radius: 20px;
+  background: linear-gradient(315deg, #A6CBEF, #C8E3FD, #8AA4BA, #90ADC6);
+  position: relative;
+  padding: 30px 10px 20px 10px;
+}
+
+.badge-upgrade .silver .detail > img {
+  position: absolute;
+  width: 3.2rem;
+  height: 1.01333rem;
+  top: -22px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+}
+
+.badge-upgrade .silver .detail .experience {
+  text-align: right;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.badge-upgrade .silver .detail .experience .line {
+  height: 5px;
+  background: #fff;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+
+.badge-upgrade .silver .detail .experience .line span {
+  height: 5px;
+  width: 50%;
+  background: #647BA0;
+  display: block;
+  border-radius: 20px;
+}
+
+.badge-upgrade .silver .detail .advantage {
+  justify-content: space-around;
+  color: #000;
+  background: linear-gradient(90deg, transparent, #D2E8FC, transparent);
+  text-align: center;
+  padding: 0.42667rem 0;
+  margin-bottom: 25px;
+}
+
+.badge-upgrade .silver .detail .advantage .adv-item .img {
+  width: 0.90667rem;
+  height: 0.90667rem;
+  padding: 10px;
+  background: linear-gradient(90deg, #9FC8D3, #62909D);
+  border-radius: 50%;
+  margin: 0 auto;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.badge-upgrade .silver .detail .btn {
+  width: 25%;
+  margin: 0 auto;
+  background: #8DAAC4;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-size: 0.42667rem;
+  text-align: center;
+}
+
+.badge-upgrade .silver .detail .btn.active {
+  background: linear-gradient(90deg, #FE989A, #FC7199);
+}
+
+.badge-upgrade .gold {
+  background: linear-gradient(315deg, #E19F59, #F2DBBB);
+  width: calc(90% - 4px);
+  margin: 0 auto;
+  padding: 2px;
+  border-radius: 20px;
+}
+
+.badge-upgrade .gold .detail {
+  background: linear-gradient(315deg, #F2DBBB, #E19F59);
+  border-radius: 20px;
+  position: relative;
+  padding: 30px 10px 20px 10px;
+}
+
+.badge-upgrade .gold .detail > img {
+  position: absolute;
+  width: 3.2rem;
+  height: 1.01333rem;
+  top: -22px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+}
+
+.badge-upgrade .gold .detail .experience {
+  text-align: right;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.badge-upgrade .gold .detail .experience .line {
+  height: 5px;
+  background: #fff;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+
+.badge-upgrade .gold .detail .experience .line span {
+  height: 5px;
+  width: 50%;
+  background: #E0802B;
+  display: block;
+  border-radius: 20px;
+}
+
+.badge-upgrade .gold .detail .advantage {
+  justify-content: space-around;
+  color: #000;
+  background: linear-gradient(90deg, transparent, #FDE5CA, transparent);
+  text-align: center;
+  padding: 0.42667rem 0;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.badge-upgrade .gold .detail .advantage .adv-item {
+  width: 33%;
+}
+
+.badge-upgrade .gold .detail .advantage .adv-item:first-child {
+  margin-bottom: 20px;
+}
+
+.badge-upgrade .gold .detail .advantage .adv-item .img {
+  width: 0.90667rem;
+  height: 0.90667rem;
+  padding: 10px;
+  background: linear-gradient(90deg, #515151, #21292B);
+  border-radius: 50%;
+  margin: 0 auto;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.badge-upgrade .gold .detail .btn {
+  width: 25%;
+  margin: 0 auto;
+  background: #D2A471;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-size: 0.42667rem;
+  text-align: center;
+}
+
+.badge-upgrade .gold .detail .btn.active {
+  background: linear-gradient(90deg, #FE989A, #FC7199);
+}
+
+.badge-upgrade .badge-rule {
+  width: 90%;
+  margin: 20px auto;
+  font-size: 14px;
+}
+
+.badge-upgrade .badge-rule h4 {
+  font-size: 20px;
+}
+
+.badge-upgrade .badge-rule p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  opacity: 0;
+  z-index: 4;
+}
+
+.toast span {
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 12px;
+}

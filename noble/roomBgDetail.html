@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>背景预览</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="../../common/css/swiper.min.css">
+  <link rel="stylesheet" href="./css/roomDetail.css">
+</head>
+<body>
+<div class="main-container">
+  <div class="container">
+    <div class="blur-box"></div>
+  </div>
+  <div class="content">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+      </div>
+    </div>
+
+    </div>
+    <div class="title">
+      <div class="noble"></div>
+      <p></p>
+      <div class="ani">动态</div>
+    </div>
+    <div class="button-wrapper">
+      <div class="button save">立即设置</div>
+      <div class="done button">已设置</div>
+    </div>
+    <div class="tips">*<span></span>以及以上贵族可设置</div>
+  </div>
+</div>
+
+  <div class="mask">
+    <div class="confirm-win">
+      <div class="top">
+        <p class="first">您当前是<span>平民</span></p>
+        <p class="second">使用此背景需要开通<span>子爵</span></p>
+      </div>
+      <div class="bottom">
+        <div class="cancel">取消</div>
+        <div class="open">立即开通</div>
+      </div>
+    </div>
+  </div>
+  <div id="loading">
+    <div id ="wrap">
+      <!-- <div class="spinner">
+        <div class="spinner-container container1">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+          <div class="circle3"></div>
+          <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container2">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+          <div class="circle3"></div>
+          <div class="circle4"></div>
+        </div>
+      </div> -->
+      <img src="./images/n-loading.gif" alt="">
+      <div class="text">请稍候...</div>
+    </div>
+  </div>
+  <div class="toast">设置失败，请稍后再试</div>
+
+  <script src="../../common/js/jquery-3.2.1.min.js"></script>
+  <script src="../../common/js/common.js"></script>
+  <script src="../../common/js/vconsole.min.js"></script>
+  <script src="../../common/js/swiper.min.js"></script>
+  <script src="../../common/js/svga.min.js"></script>
+<script src="./js/roomBgDetail.js"></script>
+</body>
+</html>
